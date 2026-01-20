@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../../assets/wijdigital-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,11 +28,9 @@ const Navbar = () => {
             className="flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-              <span className="font-display font-bold text-primary-foreground text-lg">W</span>
-            </div>
+            <img src={logo} alt="WIJ Digital Logo" className="w-10 h-10 rounded-lg" />
             <span className="font-display font-bold text-xl text-foreground">
-              WIJ <span className="gradient-text">Digital</span>
+              Wij <span className="gradient-text">Digital</span>
             </span>
           </motion.a>
 
