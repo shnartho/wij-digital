@@ -18,24 +18,24 @@ const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 px-4 py-4"
+      className="fixed top-0 left-0 right-0 z-50 px-4 py-1"
     >
-      <div className="max-w-7xl mx-auto glass-card px-6 py-4">
+      <div className="max-w-7xl mx-auto glass-card px-4 py-1">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.a
             href="#"
-            className="flex items-center gap-2"
+            className="flex items-center gap-1.5"
             whileHover={{ scale: 1.05 }}
           >
-            <img src={logo} alt="WIJ Digital Logo" className="w-10 h-10 rounded-lg" />
-            <span className="font-display font-bold text-xl text-foreground">
+            <img src={logo} alt="WIJ Digital Logo" className="w-8 h-8 rounded-lg" />
+            <span className="font-display font-bold text-lg text-foreground">
               Wij <span className="gradient-text">Digital</span>
             </span>
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <motion.a
                 key={item.label}
@@ -48,7 +48,7 @@ const Navbar = () => {
             ))}
             <motion.a
               href="#contact"
-              className="px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold transition-all duration-300 hover:shadow-lg"
+              className="px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold transition-all duration-300 hover:shadow-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               style={{
