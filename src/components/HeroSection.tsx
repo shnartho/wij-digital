@@ -270,9 +270,9 @@ const HeroSection = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { value: "150+", label: "Projects Delivered" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "50+", label: "Global Clients" },
+              { value: "15+", label: "Projects Delivered" },
+              { value: "100%", label: "Client Satisfaction" },
+              { value: "7+", label: "Global Clients" },
               { value: "24/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
@@ -484,9 +484,9 @@ const HeroSection = () => {
               className="grid grid-cols-4 gap-6"
             >
               {[
-                { value: "150+", label: "Projects Delivered" },
-                { value: "98%", label: "Client Satisfaction" },
-                { value: "50+", label: "Global Clients" },
+                { value: "15+", label: "Projects Delivered" },
+                { value: "100%", label: "Client Satisfaction" },
+                { value: "7+", label: "Global Clients" },
                 { value: "24/7", label: "Support Available" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
