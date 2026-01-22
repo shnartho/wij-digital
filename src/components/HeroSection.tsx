@@ -172,83 +172,68 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Services + Video Row */}
-          <div className="flex flex-row items-start justify-between gap-3 mb-4">
-            {/* Features List - Left Side */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex-1"
-            >
-              <div className="grid grid-cols-1 gap-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Website with Full payment integration</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Android, iOS App Development</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Digital Marketing</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Brand Identity Design</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Blockchain Development</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Web3 Solutions</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Crypto Payment Integration</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">3D Logos & Video Production</span>
-                </div>
-              </div>
-            </motion.div>
+          {/* Video Content - On Top */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mb-4"
+          >
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-xl">
+              <iframe
+                id="mobile-youtube-player"
+                src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&mute=1&loop=1&playlist=0Cb4NCHG9Do&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&enablejsapi=1"
+                title="WIJ Digital Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full object-cover"
+              ></iframe>
+            </div>
+          </motion.div>
 
-            {/* Video Content - Right Side */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex-shrink-0"
-            >
-              <div
-                className="relative w-48 aspect-video rounded-lg overflow-hidden shadow-xl cursor-pointer"
-                onClick={() => setIsVideoModalOpen(true)}
-              >
-                <iframe
-                  id="mobile-youtube-player"
-                  src="https://www.youtube.com/embed/0Cb4NCHG9Do?controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&enablejsapi=1"
-                  title="WIJ Digital Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full object-cover"
-                ></iframe>
-
-                {/* Play button overlay */}
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <div className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                    <svg className="w-4 h-4 text-primary ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8 5v10l8-5-8-5z"/>
-                    </svg>
-                  </div>
-                </div>
+          {/* Services List - Below Video in 2 Columns */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mb-4"
+          >
+            <div className="grid grid-cols-2 gap-3">
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                <span className="text-sm text-muted-foreground">Website with Full payment integration</span>
               </div>
-            </motion.div>
-          </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                <span className="text-sm text-muted-foreground">Android, iOS App Development</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                <span className="text-sm text-muted-foreground">Digital Marketing</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                <span className="text-sm text-muted-foreground">Brand Identity Design</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                <span className="text-sm text-muted-foreground">Blockchain Development</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                <span className="text-sm text-muted-foreground">Web3 Solutions</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                <span className="text-sm text-muted-foreground">Crypto Payment Integration</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                <span className="text-sm text-muted-foreground">3D Logos & Video Production</span>
+              </div>
+            </div>
+          </motion.div>
 
           {/* CTA Buttons - Full Width */}
           <motion.div
@@ -451,7 +436,7 @@ const HeroSection = () => {
           >
             <iframe
               id="desktop-youtube-player"
-              src="https://www.youtube.com/embed/0Cb4NCHG9Do?loop=1&playlist=0Cb4NCHG9Do&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&enablejsapi=1"
+              src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&mute=1&loop=1&playlist=0Cb4NCHG9Do&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&enablejsapi=1"
               title="WIJ Digital Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
