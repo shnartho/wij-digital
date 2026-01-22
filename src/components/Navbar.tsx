@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../../assets/wijdigital-logo.png";
+
+const logo = "/wijdigital-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

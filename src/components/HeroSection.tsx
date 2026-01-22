@@ -119,53 +119,53 @@ const HeroSection = () => {
               >
                 {/* Company Logos - Mobile */}
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">Gold Restaurant</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">Pasha Kebab</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">Little India</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">TypingMM</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">MetasurfAI</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">Cross Media</span>
                 </div>
 
                 {/* Duplicate set for seamless loop */}
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">Gold Restaurant</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">Pasha Kebab</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">Little India</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">TypingMM</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">MetasurfAI</span>
                 </div>
                 <div className="flex items-center gap-1 flex-shrink-0">
-                  <img src="/assets/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70" />
+                  <img src="/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70" />
                   <span className="text-xs text-muted-foreground whitespace-nowrap">Cross Media</span>
                 </div>
               </motion.div>
@@ -329,53 +329,53 @@ const HeroSection = () => {
                   >
                     {/* Company Logos */}
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Gold Restaurant</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Pasha Kebab</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Little India</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">TypingMM</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">MetasurfAI</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Cross Media</span>
                     </div>
                     
                     {/* Duplicate set for seamless loop */}
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Gold Restaurant</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Pasha Kebab</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Little India</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">TypingMM</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">MetasurfAI</span>
                     </div>
                     <div className="flex items-center gap-1 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <img src="/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Cross Media</span>
                     </div>
                   </motion.div>
