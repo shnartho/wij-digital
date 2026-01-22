@@ -85,7 +85,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-display text-3xl font-bold leading-tight text-foreground mb-4 text-center"
+            className="font-display text-4xl font-bold leading-tight text-foreground mb-4 text-center"
           >
             <span className="text-foreground">Websites, Apps, Marketing, Branding</span>
             <br />
@@ -184,35 +184,35 @@ const HeroSection = () => {
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Website with Full payment integration</span>
+                  <span className="text-base text-muted-foreground">Website with Full payment integration</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Android, iOS App Development</span>
+                  <span className="text-base text-muted-foreground">Android, iOS App Development</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Digital Marketing</span>
+                  <span className="text-base text-muted-foreground">Digital Marketing</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Brand Identity Design</span>
+                  <span className="text-base text-muted-foreground">Brand Identity Design</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Blockchain Development</span>
+                  <span className="text-base text-muted-foreground">Blockchain Development</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Web3 Solutions</span>
+                  <span className="text-base text-muted-foreground">Web3 Solutions</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Crypto Payment Integration</span>
+                  <span className="text-base text-muted-foreground">Crypto Payment Integration</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">3D Logos & Video Production</span>
+                  <span className="text-base text-muted-foreground">3D Logos & Video Production</span>
                 </div>
               </div>
             </motion.div>
@@ -225,12 +225,12 @@ const HeroSection = () => {
               className="flex-shrink-0"
             >
               <div
-                className="relative w-32 aspect-[9/16] rounded-lg overflow-hidden shadow-xl cursor-pointer"
+                className="relative w-48 aspect-video rounded-lg overflow-hidden shadow-xl cursor-pointer"
                 onClick={() => setIsVideoModalOpen(true)}
               >
                 <iframe
                   id="mobile-youtube-player"
-                  src="https://www.youtube.com/embed/bL7YtQQdSns?controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&enablejsapi=1"
+                  src="https://www.youtube.com/embed/0Cb4NCHG9Do?controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&enablejsapi=1"
                   title="WIJ Digital Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -302,16 +302,16 @@ const HeroSection = () => {
       </div>
 
       {/* Desktop Layout - Side by Side */}
-      <div className="hidden lg:block relative min-h-screen flex items-start justify-center overflow-hidden pt-4">
-        <div className="relative z-10 max-w-7xl mx-auto px-4 flex flex-row items-center justify-between gap-8 py-8">
-          {/* Text Content */}
-          <div className="flex-[1.8] text-left pt-8 pl-10">
+      <div className="hidden lg:block relative min-h-screen flex flex-col items-center overflow-hidden pt-4">
+        <div className="relative z-10 w-full mx-auto px-4 flex flex-row items-center justify-between gap-8 py-8">
+          {/* Text Content - Made Bigger */}
+          <div className="flex-[0.35] text-left pt-8 pl-10">
             {/* Main Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-display text-5xl xl:text-6xl font-bold leading-tight mb-6"
+              className="font-display text-5xl xl:text-6xl font-bold leading-tight mb-4"
             >
               <span className="text-foreground">Websites, Apps, Marketing, Branding</span>
               <br />
@@ -325,72 +325,72 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mb-4"
             >
-              <div className="flex items-center justify-between gap-8">
-                <p className="text-sm text-muted-foreground whitespace-nowrap">Trusted by</p>
-                <div className="flex-1 relative overflow-hidden max-w-2xl">
+              <div className="flex items-center justify-between gap-4">
+                <p className="text-xs text-muted-foreground whitespace-nowrap">Trusted by</p>
+                <div className="flex-1 relative overflow-hidden max-w-xl">
                   <motion.div
-                    className="flex items-center gap-12"
+                    className="flex items-center gap-8"
                     animate={{
-                      x: [0, -800],
+                      x: [0, -600],
                     }}
                     transition={{
                       x: {
                         repeat: Infinity,
                         repeatType: "loop",
-                        duration: 25,
+                        duration: 20,
                         ease: "linear",
                       },
                     }}
                   >
                     {/* Company Logos */}
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-                      <span className="text-xs text-muted-foreground whitespace-nowrap">Gold Restaurant & Grocery</span>
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <span className="text-xs text-muted-foreground whitespace-nowrap">Gold Restaurant</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Pasha Kebab" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Pasha Kebab</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Little India" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Little India</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="TypingMM" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">TypingMM</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="MetasurfAI" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">MetasurfAI</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Cross Media" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Cross Media</span>
                     </div>
                     
                     {/* Duplicate set for seamless loop */}
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-                      <span className="text-xs text-muted-foreground whitespace-nowrap">Gold Restaurant & Grocery</span>
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="Gold Restaurant & Grocery" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                      <span className="text-xs text-muted-foreground whitespace-nowrap">Gold Restaurant</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Pasha Kebab" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="Pasha Kebab" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Pasha Kebab</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Little India" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="Little India" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Little India</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="TypingMM" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="TypingMM" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">TypingMM</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="MetasurfAI" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="MetasurfAI" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">MetasurfAI</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <img src="/assets/wijdigital-logo.png" alt="Cross Media" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      <img src="/assets/wijdigital-logo.png" alt="Cross Media" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                       <span className="text-xs text-muted-foreground whitespace-nowrap">Cross Media</span>
                     </div>
                   </motion.div>
@@ -405,89 +405,40 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mb-4"
             >
-              <div className="grid grid-cols-4 gap-4 max-w-4xl">
-                <div className="flex items-center gap-3">
+              <div className="grid grid-cols-2 gap-3 max-w-2xl">
+                <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Website with Full payment integration</span>
+                  <span className="text-base text-muted-foreground">Website with Full payment integration</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Android, iOS App Development</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  <span className="text-base text-muted-foreground">Android, iOS App Development</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Digital Marketing</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  <span className="text-base text-muted-foreground">Digital Marketing</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Brand Identity Design</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  <span className="text-base text-muted-foreground">Brand Identity Design</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Blockchain Development</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  <span className="text-base text-muted-foreground">Blockchain Development</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Web3 Solutions</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  <span className="text-base text-muted-foreground">Web3 Solutions</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Crypto Payment Integration</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  <span className="text-base text-muted-foreground">Crypto Payment Integration</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">3D Logos & Video Production</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  <span className="text-base text-muted-foreground">3D Logos & Video Production</span>
                 </div>
               </div>
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-row items-center justify-start gap-4 mb-2"
-            >
-              <motion.a
-                href="#contact"
-                className="group px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-lg flex items-center gap-2 transition-all duration-300 animate-pulse-glow"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Schedule Consultation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.a>
-              
-              <motion.a
-                href="#services"
-                className="px-8 py-4 rounded-full glass-card text-foreground font-semibold text-lg border border-glass-border hover:border-primary/50 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Explore Services
-              </motion.a>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-4 grid grid-cols-4 gap-8"
-            >
-              {[
-                { value: "150+", label: "Projects Delivered" },
-                { value: "98%", label: "Client Satisfaction" },
-                { value: "50+", label: "Global Clients" },
-                { value: "24/7", label: "Support Available" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="font-display text-4xl font-bold neon-text mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
             </motion.div>
           </div>
 
@@ -496,19 +447,72 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex-1 max-w-none relative flex justify-center"
+            className="flex-[6.5] max-w-none relative"
           >
             <iframe
               id="desktop-youtube-player"
-              src="https://www.youtube.com/embed/bL7YtQQdSns?loop=1&playlist=bL7YtQQdSns&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&enablejsapi=1"
+              src="https://www.youtube.com/embed/0Cb4NCHG9Do?loop=1&playlist=0Cb4NCHG9Do&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&enablejsapi=1"
               title="WIJ Digital Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-auto h-[500px] aspect-[9/16] rounded-lg shadow-2xl"
+              className="w-full h-full aspect-video rounded-lg shadow-2xl"
             ></iframe>
             
           </motion.div>
+        </div>
+
+        {/* Stats and Buttons in Same Row - Mirroring Top Layout */}
+        <div className="mt-2 w-full max-w-none flex flex-row items-start justify-between gap-8 px-4">
+          {/* Empty space to match left text area */}
+          <div className="flex-[0.35]"></div>
+
+          {/* Content aligned with video area */}
+          <div className="flex-[6.5] flex flex-row items-start justify-start gap-12">
+            {/* Buttons on the Left */}
+            <div className="flex flex-row items-center gap-4">
+              <motion.a
+                href="#contact"
+                className="group px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-base flex items-center gap-2 transition-all duration-300 animate-pulse-glow"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Schedule Consultation
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </motion.a>
+
+              <motion.a
+                href="#services"
+                className="px-5 py-2.5 rounded-full glass-card text-foreground font-semibold text-base border border-glass-border hover:border-primary/50 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Explore Services
+              </motion.a>
+            </div>
+
+            {/* Stats on the Right */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="grid grid-cols-4 gap-6"
+            >
+              {[
+                { value: "150+", label: "Projects Delivered" },
+                { value: "98%", label: "Client Satisfaction" },
+                { value: "50+", label: "Global Clients" },
+                { value: "24/7", label: "Support Available" },
+              ].map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="font-display text-3xl font-bold neon-text mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
 
@@ -529,7 +533,7 @@ const HeroSection = () => {
             {/* Video iframe */}
             <div className="aspect-video bg-black rounded-lg overflow-hidden">
               <iframe
-                src="https://www.youtube.com/embed/bL7YtQQdSns?autoplay=1&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=1"
+                src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=1"
                 title="WIJ Digital Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
