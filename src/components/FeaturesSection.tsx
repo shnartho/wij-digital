@@ -4,33 +4,33 @@ import { Zap, Shield, Rocket, HeartHandshake, TrendingUp, Settings } from "lucid
 const features = [
   {
     icon: Zap,
-    title: "High Performance",
-    description: "Blazing-fast load times with optimized code and modern infrastructure",
+    title: "Websites That Sell",
+    description: "E-commerce platforms with payment integration that actually convert visitors into customers",
   },
   {
     icon: Settings,
-    title: "Full Customization",
-    description: "Every pixel tailored to your brand. No templates, no compromises",
+    title: "Apps That Work",
+    description: "Mobile apps that solve real business problems and drive user engagement",
   },
   {
     icon: Rocket,
-    title: "Business Growth",
-    description: "Strategic solutions designed to scale with your business goals",
+    title: "Marketing That Converts",
+    description: "Digital marketing campaigns that bring qualified leads and increase sales",
   },
   {
     icon: TrendingUp,
-    title: "Increased Visibility",
-    description: "SEO-first approach to maximize your online presence and reach",
+    title: "Brands That Stand Out",
+    description: "Brand identities that make your business memorable and build customer loyalty",
   },
   {
     icon: Shield,
-    title: "Long-term Support",
-    description: "Dedicated partnership with ongoing maintenance and updates",
+    title: "AI That Saves Money",
+    description: "Artificial intelligence solutions that automate tasks and reduce operational costs",
   },
   {
     icon: HeartHandshake,
-    title: "Sales Strategy",
-    description: "Convert visitors into customers with proven conversion techniques",
+    title: "SaaS That Scales",
+    description: "Subscription platforms that grow with your business and generate recurring revenue",
   },
 ];
 
@@ -60,11 +60,11 @@ const FeaturesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="gradient-text">Web3-Tech</span>
-            <span className="text-foreground"> Power</span>
+            <span className="gradient-text">Real Results</span>
+            <span className="text-foreground"> For Real Businesses</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cutting-edge technology meets business strategy for unstoppable digital growth
+            We build solutions that actually work for your business, not just pretty websites.
           </p>
         </motion.div>
 

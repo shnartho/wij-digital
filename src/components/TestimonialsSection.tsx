@@ -35,11 +35,11 @@ const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Client </span>
-            <span className="gradient-text">Success Stories</span>
+            <span className="text-foreground">Businesses We've </span>
+            <span className="gradient-text">Helped Grow</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join 50+ satisfied clients who chose innovation over mediocrity
+            Real businesses, real results. See what we've built for companies just like yours.
           </p>
         </motion.div>
 

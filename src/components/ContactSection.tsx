@@ -61,11 +61,11 @@ ${formData.message}
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Let's Build </span>
-            <span className="gradient-text">Together</span>
+            <span className="text-foreground">Ready to Grow Your </span>
+            <span className="gradient-text">Business?</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your digital presence? Schedule a free consultation today.
+            Let's build something that actually drives revenue for your business.
           </p>
         </motion.div>
 

@@ -87,9 +87,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-display text-4xl font-bold leading-tight text-foreground mb-4 text-center"
           >
-            <span className="text-foreground">Websites, Apps, Marketing, Branding</span>
-            <br />
-            <span className="gradient-text">All in One Place</span>
+            <span className="gradient-text">We Build Websites & Apps That Generate Revenue</span>
           </motion.h1>
 
           {/* Trusted By Section - Full Width */}
@@ -202,35 +200,35 @@ const HeroSection = () => {
             <div className="grid grid-cols-2 gap-3">
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Website with Full payment integration</span>
+                <span className="text-sm text-muted-foreground">Website with Full Payment Setup</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Android, iOS App Development</span>
+                <span className="text-sm text-muted-foreground">iOS & Android Apps That Sell</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Digital Marketing</span>
+                <span className="text-sm text-muted-foreground">Marketing That Brings Customers</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Brand Identity Design</span>
+                <span className="text-sm text-muted-foreground">Brand That Stands Out</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Blockchain Development</span>
+                <span className="text-sm text-muted-foreground">AI Automation That Saves Money</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Web3 Solutions</span>
+                <span className="text-sm text-muted-foreground">Blockchain & Crypto Solutions</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Crypto Payment Integration</span>
+                <span className="text-sm text-muted-foreground">SaaS Platforms That Scale</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">3D Logos & Video Production</span>
+                <span className="text-sm text-muted-foreground">Videos That Go Viral</span>
               </div>
             </div>
           </motion.div>
@@ -250,7 +248,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Schedule Consultation
+              Get Your Revenue Plan
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </motion.a>
 
@@ -260,7 +258,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Explore Services
+              View Solutions
             </motion.a>
           </motion.div>
 
@@ -272,10 +270,10 @@ const HeroSection = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { value: "33+", label: "Projects Delivered" },
-              { value: "100%", label: "Client Satisfaction" },
-              { value: "7+", label: "Global Clients" },
-              { value: "24/7", label: "Support Available" },
+              { value: "400%", label: "Revenue Growth" },
+              { value: "7+", label: "Business Clients" },
+              { value: "24/7", label: "Tech Support" },
+              { value: "2hrs", label: "Response Time" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="font-display text-2xl font-bold neon-text mb-1">
@@ -300,9 +298,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-display text-5xl xl:text-6xl font-bold leading-tight mb-4"
             >
-              <span className="text-foreground">Websites, Apps, Marketing, Branding</span>
-              <br />
-              <span className="gradient-text">All in One Place</span>
+              <span className="gradient-text">We Build Websites & Apps That Generate Revenue</span>
             </motion.h1>
 
             {/* Trusted By Section */}
@@ -395,35 +391,35 @@ const HeroSection = () => {
               <div className="grid grid-cols-2 gap-3 max-w-2xl">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Website with Full payment integration</span>
+                  <span className="text-base text-muted-foreground">Website with Full Payment Setup</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Android, iOS App Development</span>
+                  <span className="text-base text-muted-foreground">iOS & Android Apps That Sell</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Digital Marketing</span>
+                  <span className="text-base text-muted-foreground">Marketing That Brings Customers</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Brand Identity Design</span>
+                  <span className="text-base text-muted-foreground">Brand That Stands Out</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Blockchain Development</span>
+                  <span className="text-base text-muted-foreground">AI Automation That Saves Money</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Web3 Solutions</span>
+                  <span className="text-base text-muted-foreground">Blockchain & Crypto Solutions</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Crypto Payment Integration</span>
+                  <span className="text-base text-muted-foreground">SaaS Platforms That Scale</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">3D Logos & Video Production</span>
+                  <span className="text-base text-muted-foreground">Videos That Go Viral</span>
                 </div>
               </div>
             </motion.div>
@@ -466,7 +462,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Schedule Consultation
+                Get Your Revenue Plan
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.a>
 
@@ -476,7 +472,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Explore Services
+                View Solutions
               </motion.a>
             </div>
 
@@ -488,10 +484,10 @@ const HeroSection = () => {
               className="grid grid-cols-4 gap-6"
             >
               {[
-                { value: "33+", label: "Projects Delivered" },
-                { value: "100%", label: "Client Satisfaction" },
-                { value: "7+", label: "Global Clients" },
-                { value: "24/7", label: "Support Available" },
+                { value: "400%", label: "Revenue Growth" },
+                { value: "7+", label: "Business Clients" },
+                { value: "24/7", label: "Tech Support" },
+                { value: "2hrs", label: "Response Time" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="font-display text-3xl font-bold neon-text mb-1">

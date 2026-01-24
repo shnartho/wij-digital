@@ -4,50 +4,50 @@ import ServiceCard from "./ServiceCard";
 const services = [
   {
     icon: "🌐",
-    title: "Website with Full Payment Integration",
-    weOffer: "High-performance websites with Stripe, PayPal, crypto payments, subscription billing, and complete e-commerce solutions",
-    competitorsDont: "Basic templates without payment systems or limited checkout options",
+    title: "Website with Full Payment Setup",
+    weOffer: "E-commerce websites with Stripe, PayPal, crypto payments, subscription billing, and complete checkout systems that maximize conversions",
+    competitorsDont: "Basic templates without payment processing or limited checkout options",
   },
   {
     icon: "📱",
-    title: "Android & iOS App Development",
-    weOffer: "Native & cross-platform mobile apps with stunning UI, real-time features, push notifications, and full store deployment",
-    competitorsDont: "No mobile app development or only basic template apps",
+    title: "iOS & Android Apps That Sell",
+    weOffer: "Native mobile apps with in-app purchases, push notifications, real-time features, and app store optimization for maximum downloads",
+    competitorsDont: "No mobile development or only basic template apps without monetization",
   },
   {
     icon: "📈",
-    title: "Digital Marketing",
-    weOffer: "SEO optimization, Google Ads, Facebook/Instagram campaigns, content marketing, email automation, and analytics tracking",
-    competitorsDont: "No marketing expertise or generic campaigns without results",
+    title: "Marketing That Brings Customers",
+    weOffer: "SEO, Google Ads, Facebook/Instagram campaigns, email automation, content marketing, and analytics that deliver qualified leads",
+    competitorsDont: "Generic marketing without results tracking or ROI measurement",
   },
   {
     icon: "🎨",
-    title: "Brand Identity Design",
-    weOffer: "Complete brand strategy, logo design, color systems, typography, brand guidelines, and visual identity packages",
-    competitorsDont: "Generic logo makers without strategic brand thinking",
+    title: "Brand That Stands Out",
+    weOffer: "Complete brand strategy, logo design, visual identity, brand guidelines, and marketing materials that build recognition",
+    competitorsDont: "Generic logo makers without strategic brand positioning",
+  },
+  {
+    icon: "🤖",
+    title: "AI Automation That Saves Money",
+    weOffer: "AI-powered chatbots, automated workflows, predictive analytics, and machine learning solutions that reduce costs by 60%",
+    competitorsDont: "Manual processes without automation or AI capabilities",
   },
   {
     icon: "⛓️",
-    title: "Blockchain Development",
-    weOffer: "Smart contracts, DeFi platforms, NFT marketplaces, blockchain integration, and decentralized applications",
+    title: "Blockchain & Crypto Solutions",
+    weOffer: "Smart contracts, DeFi platforms, NFT marketplaces, Web3 apps, crypto payments, and blockchain integration for modern business",
     competitorsDont: "No blockchain expertise or Web3 capabilities",
   },
   {
-    icon: "🔮",
-    title: "Web3 Solutions",
-    weOffer: "Wallet integration, decentralized storage, Web3 authentication, DAO platforms, and blockchain-based applications",
-    competitorsDont: "Stuck in Web2, no understanding of decentralized tech",
-  },
-  {
-    icon: "💰",
-    title: "Crypto Payment Integration",
-    weOffer: "Accept Bitcoin, Ethereum, stablecoins, and 100+ cryptocurrencies with automatic conversion and secure wallets",
-    competitorsDont: "Only traditional payment methods, missing global crypto audience",
+    icon: "☁️",
+    title: "SaaS Platforms That Scale",
+    weOffer: "Subscription-based software platforms with multi-tenant architecture, API integrations, and automatic scaling for growing businesses",
+    competitorsDont: "One-off custom software without scalability or subscription models",
   },
   {
     icon: "🎬",
-    title: "3D Logos & Video Production",
-    weOffer: "Stunning 3D logo animations, promotional videos, product demos, motion graphics, and brand video content",
+    title: "Videos That Go Viral",
+    weOffer: "3D logo animations, promotional videos, product demos, motion graphics, and viral marketing content that drives engagement",
     competitorsDont: "Only static designs without video or animation capabilities",
   },
 ];
@@ -65,11 +65,11 @@ const ServicesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Enterprise Solutions for </span>
-            <span className="gradient-text">Your Business Growth</span>
+            <span className="text-foreground">What We Build For Your </span>
+            <span className="gradient-text">Business Success</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Senior software engineers delivering cutting-edge technology solutions. From websites to blockchain, we build everything your business needs to succeed in the digital era.
+            We don't just build websites and apps. We build revenue-generating systems that grow your business.
           </p>
         </motion.div>
 
