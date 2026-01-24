@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Sarah Chen",
     role: "CEO, TechVenture",
-    content: "WIJ Digital transformed our entire digital presence. Our website performance improved by 300% and our app downloads skyrocketed.",
+    content: "Wij Digital transformed our entire digital presence. Our website performance improved by 300% and our app downloads skyrocketed.",
     rating: 5,
   },
   {

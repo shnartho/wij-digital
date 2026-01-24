@@ -20,7 +20,7 @@ const Footer = () => {
                 <span className="font-display font-bold text-primary-foreground text-lg">W</span>
               </div>
               <span className="font-display font-bold text-xl text-foreground">
-                WIJ <span className="gradient-text">Digital</span>
+                Wij <span className="gradient-text">Digital</span>
               </span>
             </motion.div>
             <p className="text-muted-foreground max-w-md leading-relaxed">
@@ -61,7 +61,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-glass-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} WIJ Digital. All rights reserved.
+            © {currentYear} Wij Digital. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {["Privacy Policy", "Terms of Service"].map((item) => (

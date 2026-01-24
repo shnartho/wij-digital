@@ -12,9 +12,28 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Thank you for your inquiry! We'll get back to you within 24 hours.");
+    
+    // Format WhatsApp message
+    const whatsappMessage = `
+*New Contact from Wij Digital Website*
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+${formData.company ? `*Company:* ${formData.company}` : ''}
+
+*Message:*
+${formData.message}
+    `.trim();
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const phoneNumber = "351910481951"; // WhatsApp format: country code + number
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
@@ -64,9 +83,9 @@ const ContactSection = () => {
 
             <div className="space-y-6 mb-12">
               {[
-                { icon: Mail, label: "Email", value: "hello@wijdigital.com" },
-                { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-                { icon: MapPin, label: "Location", value: "Global, Remote-First" },
+                { icon: Mail, label: "Email", value: "shnartho@gmail.com", link: "mailto:shnartho@gmail.com" },
+                { icon: Phone, label: "Phone", value: "+351 910 481 951", link: "tel:+351910481951" },
+                { icon: MapPin, label: "Location", value: "Europe, Remote-First", link: null },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
@@ -74,7 +93,13 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">{item.label}</div>
-                    <div className="text-foreground font-medium">{item.value}</div>
+                    {item.link ? (
+                      <a href={item.link} className="text-foreground font-medium hover:text-primary transition-colors">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <div className="text-foreground font-medium">{item.value}</div>
+                    )}
                   </div>
                 </div>
               ))}

@@ -27,7 +27,7 @@ const Navbar = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <img src={logo} alt="WIJ Digital Logo" className="w-6 h-6 rounded" />
+          <img src={logo} alt="Wij Digital Logo" className="w-6 h-6 rounded" />
           <span className="font-display font-bold text-sm text-foreground">
             Wij <span className="gradient-text">Digital</span>
           </span>
@@ -70,7 +70,7 @@ const Navbar = () => {
       <div className="md:hidden fixed top-2 left-2 z-50">
         {/* Logo */}
         <a href="#" className="flex items-center gap-1 glass-card px-2 py-1 rounded-full bg-background/95 backdrop-blur-sm">
-          <img src={logo} alt="WIJ Digital Logo" className="w-5 h-5 rounded" />
+          <img src={logo} alt="Wij Digital Logo" className="w-5 h-5 rounded" />
           <span className="font-display font-bold text-xs text-foreground">
             Wij <span className="gradient-text">Digital</span>
           </span>

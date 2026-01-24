@@ -50,7 +50,7 @@ const ServiceCard = ({
             </div>
             <div>
               <span className="text-xs uppercase tracking-wider text-primary font-semibold">
-                WIJ Digital
+                Wij Digital
               </span>
               <p className="text-sm text-foreground mt-1">{weOffer}</p>
             </div>

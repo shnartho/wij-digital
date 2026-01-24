@@ -4,39 +4,51 @@ import ServiceCard from "./ServiceCard";
 const services = [
   {
     icon: "🌐",
-    title: "Website Development",
-    weOffer: "High-performance, SEO-optimized websites with modern tech stacks and blazing-fast load times",
-    competitorsDont: "Basic templates with slow performance and poor optimization",
+    title: "Website with Full Payment Integration",
+    weOffer: "High-performance websites with Stripe, PayPal, crypto payments, subscription billing, and complete e-commerce solutions",
+    competitorsDont: "Basic templates without payment systems or limited checkout options",
   },
   {
     icon: "📱",
-    title: "Android Apps",
-    weOffer: "Native Android applications with stunning UI, smooth performance, and Play Store deployment",
-    competitorsDont: "No mobile app development capabilities",
-  },
-  {
-    icon: "🍎",
-    title: "iOS Apps",
-    weOffer: "Premium iOS applications with Apple's design guidelines, optimized for App Store success",
-    competitorsDont: "No iOS development services",
-  },
-  {
-    icon: "⚡",
-    title: "Custom Solutions",
-    weOffer: "Streaming chat, real-time systems, AI integrations, and fully custom enterprise solutions",
-    competitorsDont: "Only basic website templates, no custom development",
+    title: "Android & iOS App Development",
+    weOffer: "Native & cross-platform mobile apps with stunning UI, real-time features, push notifications, and full store deployment",
+    competitorsDont: "No mobile app development or only basic template apps",
   },
   {
     icon: "📈",
     title: "Digital Marketing",
-    weOffer: "Data-driven campaigns, SEO, PPC, social media marketing with measurable ROI",
-    competitorsDont: "No marketing services or growth strategies",
+    weOffer: "SEO optimization, Google Ads, Facebook/Instagram campaigns, content marketing, email automation, and analytics tracking",
+    competitorsDont: "No marketing expertise or generic campaigns without results",
   },
   {
     icon: "🎨",
-    title: "Branding & Design",
-    weOffer: "Complete brand identity, logo design, visual systems, and brand strategy",
-    competitorsDont: "Generic designs without brand cohesion",
+    title: "Brand Identity Design",
+    weOffer: "Complete brand strategy, logo design, color systems, typography, brand guidelines, and visual identity packages",
+    competitorsDont: "Generic logo makers without strategic brand thinking",
+  },
+  {
+    icon: "⛓️",
+    title: "Blockchain Development",
+    weOffer: "Smart contracts, DeFi platforms, NFT marketplaces, blockchain integration, and decentralized applications",
+    competitorsDont: "No blockchain expertise or Web3 capabilities",
+  },
+  {
+    icon: "🔮",
+    title: "Web3 Solutions",
+    weOffer: "Wallet integration, decentralized storage, Web3 authentication, DAO platforms, and blockchain-based applications",
+    competitorsDont: "Stuck in Web2, no understanding of decentralized tech",
+  },
+  {
+    icon: "💰",
+    title: "Crypto Payment Integration",
+    weOffer: "Accept Bitcoin, Ethereum, stablecoins, and 100+ cryptocurrencies with automatic conversion and secure wallets",
+    competitorsDont: "Only traditional payment methods, missing global crypto audience",
+  },
+  {
+    icon: "🎬",
+    title: "3D Logos & Video Production",
+    weOffer: "Stunning 3D logo animations, promotional videos, product demos, motion graphics, and brand video content",
+    competitorsDont: "Only static designs without video or animation capabilities",
   },
 ];
 
@@ -53,11 +65,11 @@ const ServicesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Why Choose </span>
-            <span className="gradient-text">WIJ Digital?</span>
+            <span className="text-foreground">Enterprise Solutions for </span>
+            <span className="gradient-text">Your Business Growth</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            See how we outperform traditional agencies with comprehensive digital solutions
+            Senior software engineers delivering cutting-edge technology solutions. From websites to blockchain, we build everything your business needs to succeed in the digital era.
           </p>
         </motion.div>
 

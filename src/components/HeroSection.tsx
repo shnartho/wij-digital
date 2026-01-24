@@ -183,7 +183,7 @@ const HeroSection = () => {
               <iframe
                 id="mobile-youtube-player"
                 src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&mute=1&loop=1&playlist=0Cb4NCHG9Do&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&enablejsapi=1"
-                title="WIJ Digital Video"
+                title="Wij Digital Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -243,7 +243,9 @@ const HeroSection = () => {
             className="flex flex-col gap-2 items-center mb-6"
           >
             <motion.a
-              href="#contact"
+              href="https://wa.me/351910481951?text=Hi!%20I'd%20like%20to%20schedule%20a%20consultation%20with%20WIJ%20Digital."
+              target="_blank"
+              rel="noopener noreferrer"
               className="group px-4 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-sm flex items-center justify-center gap-2 transition-all duration-300 animate-pulse-glow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -270,7 +272,7 @@ const HeroSection = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { value: "15+", label: "Projects Delivered" },
+              { value: "33+", label: "Projects Delivered" },
               { value: "100%", label: "Client Satisfaction" },
               { value: "7+", label: "Global Clients" },
               { value: "24/7", label: "Support Available" },
@@ -437,7 +439,7 @@ const HeroSection = () => {
             <iframe
               id="desktop-youtube-player"
               src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&mute=1&loop=1&playlist=0Cb4NCHG9Do&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&enablejsapi=1"
-              title="WIJ Digital Video"
+              title="Wij Digital Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -457,7 +459,9 @@ const HeroSection = () => {
             {/* Buttons on the Left */}
             <div className="flex flex-row items-center gap-4">
               <motion.a
-                href="#contact"
+                href="https://wa.me/351910481951?text=Hi!%20I'd%20like%20to%20schedule%20a%20consultation%20with%20WIJ%20Digital."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-base flex items-center gap-2 transition-all duration-300 animate-pulse-glow"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -484,7 +488,7 @@ const HeroSection = () => {
               className="grid grid-cols-4 gap-6"
             >
               {[
-                { value: "15+", label: "Projects Delivered" },
+                { value: "33+", label: "Projects Delivered" },
                 { value: "100%", label: "Client Satisfaction" },
                 { value: "7+", label: "Global Clients" },
                 { value: "24/7", label: "Support Available" },
@@ -519,7 +523,7 @@ const HeroSection = () => {
             <div className="aspect-video bg-black rounded-lg overflow-hidden">
               <iframe
                 src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=1"
-                title="WIJ Digital Video"
+                title="Wij Digital Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
