@@ -8,47 +8,69 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://wijdigital.com/</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://www.wij.digital/</loc>
+    <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Services Section -->
+
+  <!-- About Us Page -->
   <url>
-    <loc>https://wijdigital.com/#services</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://www.wij.digital/about</loc>
+    <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Features Section -->
+
+  <!-- FAQ Page -->
   <url>
-    <loc>https://wijdigital.com/#features</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://www.wij.digital/faq</loc>
+    <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Testimonials Section -->
+
+  <!-- Blog Page -->
   <url>
-    <loc>https://wijdigital.com/#testimonials</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.wij.digital/blog</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  
-  <!-- Contact Section -->
+
+  <!-- Contact Page -->
   <url>
-    <loc>https://wijdigital.com/#contact</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://www.wij.digital/contact</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service Pages -->
+  <url>
+    <loc>https://www.wij.digital/web-development</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.wij.digital/mobile-development</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.wij.digital/ecommerce</loc>
+    <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Privacy Policy Page -->
   <url>
-    <loc>https://wijdigital.com/privacy-policy</loc>
+    <loc>https://www.wij.digital/privacy-policy</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -56,7 +78,7 @@
 
   <!-- Terms of Service Page -->
   <url>
-    <loc>https://wijdigital.com/terms-of-service</loc>
+    <loc>https://www.wij.digital/terms-of-service</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
