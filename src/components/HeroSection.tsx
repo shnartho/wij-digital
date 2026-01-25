@@ -241,7 +241,7 @@ const HeroSection = () => {
             className="flex flex-col gap-2 items-center mb-6"
           >
             <motion.a
-              href="https://wa.me/351910481951?text=Hi!%20I'd%20like%20to%20schedule%20a%20consultation%20with%20WIJ%20Digital."
+              href="https://wa.me/351910481951?text=Hi!%20I'd%20like%20to%20schedule%20a%20consultation%20with%20Wij%20Digital."
               target="_blank"
               rel="noopener noreferrer"
               className="group px-4 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-sm flex items-center justify-center gap-2 transition-all duration-300 animate-pulse-glow"
@@ -455,7 +455,7 @@ const HeroSection = () => {
             {/* Buttons on the Left */}
             <div className="flex flex-row items-center gap-4">
               <motion.a
-                href="https://wa.me/351910481951?text=Hi!%20I'd%20like%20to%20schedule%20a%20consultation%20with%20WIJ%20Digital."
+                href="https://wa.me/351910481951?text=Hi!%20I'd%20like%20to%20schedule%20a%20consultation%20with%20Wij%20Digital."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-base flex items-center gap-2 transition-all duration-300 animate-pulse-glow"

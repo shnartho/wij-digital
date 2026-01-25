@@ -3,21 +3,21 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CEO, TechVenture",
-    content: "Wij Digital transformed our entire digital presence. Our website performance improved by 300% and our app downloads skyrocketed.",
+    name: "Navpreet Singh",
+    role: "CEO, Gold Restaurant and Grocery",
+    content: "Wij Digital completely changed our way of operation. Our website, Android, and iOS apps at www.goldrg.com now allow people to order food online. Our business is growing, digital marketing is driving revenue up, and we're getting permanent customers with better visibility.",
     rating: 5,
   },
   {
-    name: "Marcus Williams",
-    role: "Founder, GrowthHub",
-    content: "The custom streaming solution they built exceeded all expectations. Their technical expertise is unmatched in the industry.",
+    name: "Romulo Cruz",
+    role: "CEO, Cross Midia",
+    content: "Our strategic partnership with Wij Digital has transformed our business. They've helped improve our SEO, organic reach, and raised our business standards. Check out our website at https://romulocruz.com/ to see the results.",
     rating: 5,
   },
   {
-    name: "Elena Rodriguez",
-    role: "Marketing Director, BrandFirst",
-    content: "Finally, an agency that delivers on all fronts. From branding to digital marketing, they've been instrumental in our 10x growth.",
+    name: "James Thompson",
+    role: "CEO, British Innovations",
+    content: "Wij Digital delivered exactly what we needed for our digital transformation. Their expertise in web development and marketing strategies helped us scale our operations and reach new markets effectively.",
     rating: 5,
   },
 ];
@@ -38,9 +38,6 @@ const TestimonialsSection = () => {
             <span className="text-foreground">Businesses We've </span>
             <span className="gradient-text">Helped Grow</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real businesses, real results. See what we've built for companies just like yours.
-          </p>
         </motion.div>
 
         {/* Testimonials Grid */}
