@@ -5,19 +5,22 @@ const testimonials = [
   {
     name: "Navpreet Singh",
     role: "CEO, Gold Restaurant and Grocery",
+    website: "https://www.goldrg.com",
     content: "Wij Digital completely changed our way of operation. Our website, Android, and iOS apps at www.goldrg.com now allow people to order food online. Our business is growing, digital marketing is driving revenue up, and we're getting permanent customers with better visibility.",
     rating: 5,
   },
   {
     name: "Romulo Cruz",
     role: "CEO, Cross Midia",
-    content: "Our strategic partnership with Wij Digital has transformed our business. They've helped improve our SEO, organic reach, and raised our business standards. Check out our website at https://romulocruz.com/ to see the results.",
+    website: "https://www.romulocruz.com",
+    content: "Our strategic partnership with Wij Digital transformed our business. They improved our SEO, expanded organic reach, and elevated our business standards. From website development to marketing strategies, they've driven our growth. Visit www.romulocruz.com to see the results.",
     rating: 5,
   },
   {
-    name: "James Thompson",
-    role: "CEO, British Innovations",
-    content: "Wij Digital delivered exactly what we needed for our digital transformation. Their expertise in web development and marketing strategies helped us scale our operations and reach new markets effectively.",
+    name: "Shahadat Nayem",
+    role: "CEO, MetasurfAI",
+    website: "https://www.metasurfai.com",
+    content: "Wij Digital built our complex webapp and continues development. Our B2C model needed strategic marketing, and they've delivered exceptional results. Their technical expertise and strategies helped us scale effectively. I highly recommend their professional services.",
     rating: 5,
   },
 ];
@@ -30,7 +33,7 @@ const TestimonialsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -47,7 +50,7 @@ const TestimonialsSection = () => {
               key={testimonial.name}
               initial={{ opacity: 0, y: 50, rotateY: -10 }}
               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
               viewport={{ once: true }}
               whileHover={{ 
                 y: -10,
@@ -86,6 +89,16 @@ const TestimonialsSection = () => {
                     <div className="text-sm text-muted-foreground">
                       {testimonial.role}
                     </div>
+                    {testimonial.website && (
+                      <a
+                        href={testimonial.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs gradient-text hover:opacity-80 transition-opacity duration-200 mt-1 block font-medium"
+                      >
+                        www.{testimonial.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

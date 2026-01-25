@@ -8,10 +8,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Services", href: "#services" },
-    { label: "Features", href: "#features" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/#services" },
+    { label: "Features", href: "/#features" },
+    { label: "Testimonials", href: "/#testimonials" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="fixed top-4 left-4 z-50 hidden md:block">
         {/* Logo */}
         <motion.a
-          href="#"
+          href="/"
           className="flex items-center gap-1 glass-card px-3 py-1.5 rounded-full"
           whileHover={{ scale: 1.05 }}
           initial={{ y: -100, opacity: 0 }}
@@ -53,7 +53,7 @@ const Navbar = () => {
             </motion.a>
           ))}
           <motion.a
-            href="#contact"
+            href="/#contact"
             className="px-3 py-1.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-sm transition-all duration-300 hover:shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -69,7 +69,7 @@ const Navbar = () => {
       {/* Mobile Navbar - Logo and Menu Separated */}
       <div className="md:hidden fixed top-2 left-2 z-50">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-1 glass-card px-2 py-1 rounded-full bg-background/95 backdrop-blur-sm">
+        <a href="/" className="flex items-center gap-1 glass-card px-2 py-1 rounded-full bg-background/95 backdrop-blur-sm">
           <img src={logo} alt="Wij Digital Logo" className="w-5 h-5 rounded" />
           <span className="font-display font-bold text-xs text-foreground">
             Wij <span className="gradient-text">Digital</span>
@@ -106,7 +106,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 className="px-3 py-1.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-center text-sm mt-1"
                 onClick={() => setIsOpen(false)}
               >

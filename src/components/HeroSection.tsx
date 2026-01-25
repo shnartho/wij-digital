@@ -87,7 +87,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-display text-4xl font-bold leading-tight text-foreground mb-4 text-center"
           >
-            <span className="gradient-text">We Build Websites & Apps That Generate Revenue</span>
+            <span className="gradient-text">We Transform Your Business Digitally to Drive Revenue</span>
           </motion.h1>
 
           {/* Trusted By Section - Full Width */}
@@ -298,7 +298,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-display text-5xl xl:text-6xl font-bold leading-tight mb-4"
             >
-              <span className="gradient-text">We Build Websites & Apps That Generate Revenue</span>
+              <span className="gradient-text">We Transform Your Business Digitally to Drive Revenue</span>
             </motion.h1>
 
             {/* Trusted By Section */}

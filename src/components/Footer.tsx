@@ -12,16 +12,11 @@ const Footer = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className="flex items-center gap-2 mb-4"
+              className="mb-4"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="font-display font-bold text-primary-foreground text-lg">W</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">
-                Wij <span className="gradient-text">Digital</span>
-              </span>
+              <img src="/wijdigital-logo.png" alt="Wij Digital Logo" className="h-10 w-auto" />
             </motion.div>
             <p className="text-muted-foreground max-w-md leading-relaxed">
               Your complete digital partner. From websites and apps to marketing and branding, 
@@ -64,11 +59,12 @@ const Footer = () => {
             © {currentYear} Wij Digital. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            {["Privacy Policy", "Terms of Service"].map((item) => (
-              <a key={item} href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-                {item}
-              </a>
-            ))}
+            <a href="/privacy-policy" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+              Privacy Policy
+            </a>
+            <a href="/terms-of-service" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>

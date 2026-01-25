@@ -46,4 +46,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://wijdigital.com/privacy-policy</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Terms of Service Page -->
+  <url>
+    <loc>https://wijdigital.com/terms-of-service</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

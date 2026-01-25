@@ -22,7 +22,7 @@ const ServiceCard = ({
     <motion.div
       initial={{ opacity: 0, y: 50, rotateX: -10 }}
       whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      transition={{ duration: 0.4, delay, ease: "easeOut" }}
       viewport={{ once: true }}
       whileHover={{ 
         y: -15, 
