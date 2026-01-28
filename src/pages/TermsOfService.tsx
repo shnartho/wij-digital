@@ -1,11 +1,22 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <>
+      <Helmet>
+        <title>Terms of Service | Wij Digital</title>
+        <meta name="description" content="Read our terms of service to understand the rules and regulations for using Wij Digital's services." />
+        <link rel="canonical" href="https://www.wijdigital.com/terms-of-service" />
+        <meta property="og:title" content="Terms of Service | Wij Digital" />
+        <meta property="og:description" content="Read our terms of service to understand the rules and regulations for using Wij Digital's services." />
+        <meta property="og:url" content="https://www.wijdigital.com/terms-of-service" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
@@ -147,6 +158,7 @@ const TermsOfService = () => {
       <Footer />
       <WhatsAppButton />
     </div>
+    </>
   );
 };
 

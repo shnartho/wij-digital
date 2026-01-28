@@ -312,10 +312,10 @@ export default function ServicePage() {
         <title>{service.title} Services | Wij Digital</title>
         <meta name="description" content={service.metaDescription} />
         <meta name="keywords" content={service.keywords} />
-        <link rel="canonical" href={`https://www.wij.digital/services/${service.slug}`} />
+        <link rel="canonical" href={`https://www.wijdigital.com/services/${service.slug}`} />
         <meta property="og:title" content={`${service.title} Services | Wij Digital`} />
         <meta property="og:description" content={service.metaDescription} />
-        <meta property="og:url" content={`https://www.wij.digital/services/${service.slug}`} />
+        <meta property="og:url" content={`https://www.wijdigital.com/services/${service.slug}`} />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -347,7 +347,9 @@ export default function ServicePage() {
                 {service.longDescription}
               </p>
               <a
-                href="/#contact"
+                href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Get Started
@@ -533,7 +535,9 @@ export default function ServicePage() {
                 Let's discuss your project and create a custom solution that drives real results for your business.
               </p>
               <a
-                href="/#contact"
+                href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Contact Us Today

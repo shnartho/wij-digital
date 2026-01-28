@@ -37,7 +37,7 @@ export default function Portfolio() {
       ],
       technologies: ["Next.js", "TypeScript", "PostgreSQL", "AWS"],
       icon: Code,
-      link: "https://www.romulocruz.com",
+      link: "https://romulocruz.com/",
       client: "Romulo Cruz, Founder"
     },
     {
@@ -53,53 +53,11 @@ export default function Portfolio() {
       icon: TrendingUp,
       link: "https://www.metasurfai.com",
       client: "Shahadat Nayem, CEO"
-    },
-    {
-      title: "E-commerce Fashion Store",
-      category: "Online Retail Platform",
-      description: "Created a modern e-commerce platform for a fashion brand with 5000+ products. Includes advanced filtering, wishlist, and personalized recommendations.",
-      results: [
-        "Processed $500K+ in first 6 months",
-        "95% customer satisfaction rate",
-        "45% of traffic from mobile devices"
-      ],
-      technologies: ["Shopify", "React", "GraphQL", "Stripe"],
-      icon: ShoppingCart,
-      link: "#",
-      client: "Fashion Retail Brand"
-    },
-    {
-      title: "Healthcare Mobile App",
-      category: "Health & Wellness",
-      description: "Developed a comprehensive health tracking mobile app for iOS and Android. Features include appointment booking, medication reminders, and telehealth integration.",
-      results: [
-        "50,000+ downloads in first year",
-        "4.8 star rating on app stores",
-        "Featured by Apple in Health category"
-      ],
-      technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
-      icon: Smartphone,
-      link: "#",
-      client: "Healthcare Provider"
-    },
-    {
-      title: "Real Estate Marketplace",
-      category: "Property Listing Platform",
-      description: "Built a modern property listing and search platform with advanced filters, virtual tours, mortgage calculator, and agent communication features.",
-      results: [
-        "2,000+ active property listings",
-        "150% increase in lead generation",
-        "Reduced time-to-sale by 30%"
-      ],
-      technologies: ["Next.js", "PostgreSQL", "MapBox", "AWS"],
-      icon: Code,
-      link: "#",
-      client: "Real Estate Agency"
     }
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Completed" },
+    { number: "23+", label: "Projects Completed" },
     { number: "40+", label: "Happy Clients" },
     { number: "15+", label: "Countries Served" },
     { number: "100%", label: "Client Satisfaction" }
@@ -111,10 +69,10 @@ export default function Portfolio() {
         <title>Portfolio & Case Studies | Wij Digital Success Stories</title>
         <meta name="description" content="Explore Wij Digital's portfolio of successful web development, mobile app, and digital marketing projects. Real client success stories and measurable results." />
         <meta name="keywords" content="portfolio, case studies, web development projects, mobile app projects, client success stories, digital transformation examples" />
-        <link rel="canonical" href="https://www.wij.digital/portfolio" />
+        <link rel="canonical" href="https://www.wijdigital.com/portfolio" />
         <meta property="og:title" content="Portfolio & Case Studies | Wij Digital Success Stories" />
         <meta property="og:description" content="Explore our portfolio of successful projects and real client success stories with measurable results." />
-        <meta property="og:url" content="https://www.wij.digital/portfolio" />
+        <meta property="og:url" content="https://www.wijdigital.com/portfolio" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -298,7 +256,9 @@ export default function Portfolio() {
                 Let's create something amazing together. Contact us to discuss your project and see how we can help you achieve exceptional results.
               </p>
               <a
-                href="/#contact"
+                href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Start Your Project

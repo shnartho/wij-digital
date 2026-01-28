@@ -1,11 +1,22 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <>
+      <Helmet>
+        <title>Privacy Policy | Wij Digital</title>
+        <meta name="description" content="Read our privacy policy to understand how Wij Digital collects, uses, and protects your personal information." />
+        <link rel="canonical" href="https://www.wijdigital.com/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy | Wij Digital" />
+        <meta property="og:description" content="Read our privacy policy to understand how Wij Digital collects, uses, and protects your personal information." />
+        <meta property="og:url" content="https://www.wijdigital.com/privacy-policy" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
@@ -121,6 +132,7 @@ const PrivacyPolicy = () => {
       <Footer />
       <WhatsAppButton />
     </div>
+    </>
   );
 };
 

@@ -15,20 +15,20 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      content: "hello@wij.digital",
-      link: "mailto:hello@wij.digital"
+      content: "shnartho@gmail.com",
+      link: "mailto:shnartho@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      content: "+351 910 481 951",
+      link: "tel:+351910481951"
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      content: "+1 (555) 123-4567",
-      link: "https://wa.me/15551234567"
+      content: "+351 910 481 951",
+      link: "https://wa.me/351910481951"
     },
     {
       icon: MapPin,
@@ -50,8 +50,8 @@ export default function Contact() {
     "mainEntity": {
       "@type": "Organization",
       "name": "Wij Digital",
-      "email": "hello@wij.digital",
-      "telephone": "+15551234567",
+      "email": "shnartho@gmail.com",
+      "telephone": "+351910481951",
       "areaServed": "Worldwide"
     }
   };
@@ -62,10 +62,10 @@ export default function Contact() {
         <title>Contact Us | Get in Touch with Wij Digital</title>
         <meta name="description" content="Contact Wij Digital for web development, mobile app development, and digital marketing services. Get a free consultation and quote. Email, phone, or WhatsApp us today!" />
         <meta name="keywords" content="contact wij digital, web development inquiry, mobile app quote, digital marketing consultation, get in touch, free consultation" />
-        <link rel="canonical" href="https://www.wij.digital/contact" />
+        <link rel="canonical" href="https://www.wijdigital.com/contact" />
         <meta property="og:title" content="Contact Us | Get in Touch with Wij Digital" />
         <meta property="og:description" content="Contact us for web development, mobile app development, and digital marketing services. Free consultation available!" />
-        <meta property="og:url" content="https://www.wij.digital/contact" />
+        <meta property="og:url" content="https://www.wijdigital.com/contact" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -151,7 +151,20 @@ export default function Contact() {
                 </span>
               </h2>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target as HTMLFormElement);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const phone = formData.get('phone');
+                const service = formData.get('service');
+                const budget = formData.get('budget');
+                const message = formData.get('message');
+
+                const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Budget:* ${budget}%0A*Message:* ${message}`;
+
+                window.open(`https://wa.me/351910481951?text=${whatsappMessage}`, '_blank');
+              }}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-white mb-2 font-medium">
@@ -303,13 +316,13 @@ export default function Contact() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+351910481951"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
                   Call Now
                 </a>
                 <a
-                  href="https://wa.me/15551234567"
+                  href="https://wa.me/351910481951"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-green-600 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-green-600/50"

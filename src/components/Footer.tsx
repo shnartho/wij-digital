@@ -30,7 +30,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {["Web Development", "Mobile Apps", "Digital Marketing", "Branding", "Custom Solutions"].map((item) => (
                 <li key={item}>
-                  <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href="/services" className="text-muted-foreground hover:text-primary transition-colors">
                     {item}
                   </a>
                 </li>
@@ -42,13 +42,24 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-3">
-              {["About Us", "Case Studies", "Careers", "Contact"].map((item) => (
-                <li key={item}>
-                  <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="/about-us" className="text-muted-foreground hover:text-primary transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">
+                  Case Studies
+                </a>
+              </li>
+              <li>
+                <span className="text-muted-foreground">Careers</span>
+              </li>
+              <li>
+                <a href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
         </div>

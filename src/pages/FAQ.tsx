@@ -145,10 +145,10 @@ export default function FAQ() {
         <title>FAQ - Frequently Asked Questions | Wij Digital</title>
         <meta name="description" content="Find answers to common questions about Wij Digital's web development, mobile app development, digital marketing services, pricing, timelines, and processes." />
         <meta name="keywords" content="web development faq, mobile app development questions, digital marketing pricing, website cost, app development timeline, seo services" />
-        <link rel="canonical" href="https://www.wij.digital/faq" />
+        <link rel="canonical" href="https://www.wijdigital.com/faq" />
         <meta property="og:title" content="FAQ - Frequently Asked Questions | Wij Digital" />
         <meta property="og:description" content="Find answers to common questions about our services, pricing, timelines, and processes." />
-        <meta property="og:url" content="https://www.wij.digital/faq" />
+        <meta property="og:url" content="https://www.wijdigital.com/faq" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -233,7 +233,9 @@ export default function FAQ() {
                 We're here to help! Contact us for personalized answers to your specific questions.
               </p>
               <a
-                href="/#contact"
+                href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Contact Us

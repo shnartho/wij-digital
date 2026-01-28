@@ -39,4 +39,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://wijdigital.com/sitemap.xml
+Sitemap: https://www.wijdigital.com/sitemap.xml

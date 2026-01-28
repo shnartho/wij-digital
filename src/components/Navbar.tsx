@@ -9,7 +9,8 @@ const Navbar = () => {
 
   const navItems = [
     { label: "About", href: "/about-us" },
-    { label: "Services", href: "/#services" },
+    { label: "Services", href: "/services" },
+    { label: "Why us?", href: "/why-us" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
@@ -54,7 +55,9 @@ const Navbar = () => {
             </motion.a>
           ))}
           <motion.a
-            href="/#contact"
+            href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-3 py-1.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-sm transition-all duration-300 hover:shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -107,7 +110,9 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="/#contact"
+                href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-3 py-1.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-center text-sm mt-1"
                 onClick={() => setIsOpen(false)}
               >

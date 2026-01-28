@@ -46,7 +46,7 @@ export default function AboutUs() {
 
   const team = [
     {
-      stat: "50+",
+      stat: "23+",
       label: "Projects Delivered",
       description: "Successfully completed digital transformations"
     },
@@ -56,7 +56,7 @@ export default function AboutUs() {
       description: "Rated 5-star by our clients"
     },
     {
-      stat: "5+ Years",
+      stat: "7+ Years",
       label: "Industry Experience",
       description: "Expertise across multiple domains"
     },
@@ -73,10 +73,10 @@ export default function AboutUs() {
         <title>About Us - Wij Digital | Expert Digital Transformation Agency</title>
         <meta name="description" content="Learn about Wij Digital, a leading digital transformation agency specializing in web development, mobile apps, and digital marketing. Discover our mission, values, and commitment to client success." />
         <meta name="keywords" content="about wij digital, digital agency, web development company, mobile app development team, digital transformation experts, software development agency" />
-        <link rel="canonical" href="https://www.wij.digital/about-us" />
+        <link rel="canonical" href="https://www.wijdigital.com/about-us" />
         <meta property="og:title" content="About Us - Wij Digital | Expert Digital Transformation Agency" />
         <meta property="og:description" content="Learn about Wij Digital, a leading digital transformation agency specializing in web development, mobile apps, and digital marketing." />
-        <meta property="og:url" content="https://www.wij.digital/about-us" />
+        <meta property="og:url" content="https://www.wijdigital.com/about-us" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -240,7 +240,9 @@ export default function AboutUs() {
                 Let's discuss how we can help you achieve your digital goals and drive real results for your business.
               </p>
               <a
-                href="/#contact"
+                href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Get Started Today

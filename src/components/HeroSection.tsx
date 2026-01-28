@@ -253,7 +253,7 @@ const HeroSection = () => {
             </motion.a>
 
             <motion.a
-              href="#services"
+              href="/services"
               className="px-4 py-3 rounded-full glass-card text-foreground font-semibold text-sm border border-glass-border hover:border-primary/50 transition-all duration-300 text-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -467,7 +467,7 @@ const HeroSection = () => {
               </motion.a>
 
               <motion.a
-                href="#services"
+                href="/services"
                 className="px-5 py-2.5 rounded-full glass-card text-foreground font-semibold text-base border border-glass-border hover:border-primary/50 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
