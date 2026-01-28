@@ -6,15 +6,43 @@ import ParticleBackground from "./ParticleBackground";
 // YouTube API types
 declare global {
   interface Window {
-    YT: any;
+    YT: {
+      Player: new (
+        elementId: string,
+        options: {
+          videoId: string;
+          playerVars?: Record<string, any>;
+          events?: {
+            onReady?: (event: { target: YTPlayer }) => void;
+            onStateChange?: (event: { target: YTPlayer; data: number }) => void;
+          };
+        }
+      ) => YTPlayer;
+      PlayerState: {
+        PLAYING: number;
+        PAUSED: number;
+        ENDED: number;
+      };
+    };
     onYouTubeIframeAPIReady: () => void;
   }
 }
 
+interface YTPlayer {
+  playVideo: () => void;
+  pauseVideo: () => void;
+  stopVideo: () => void;
+  mute: () => void;
+  unMute: () => void;
+  isMuted: () => boolean;
+  getPlayerState: () => number;
+  destroy: () => void;
+}
+
 const HeroSection = () => {
   const [isPlaying, setIsPlaying] = useState(false); // Default to false for manual play
-  const [mobilePlayer, setMobilePlayer] = useState<any>(null);
-  const [desktopPlayer, setDesktopPlayer] = useState<any>(null);
+  const [mobilePlayer, setMobilePlayer] = useState<YTPlayer | null>(null);
+  const [desktopPlayer, setDesktopPlayer] = useState<YTPlayer | null>(null);
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 

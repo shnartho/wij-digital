@@ -5,12 +5,12 @@ import { useParams, Navigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
-import { Code, Smartphone, Palette, TrendingUp, ShoppingCart, Wrench, Check } from 'lucide-react';
+import { Code, Smartphone, Palette, TrendingUp, ShoppingCart, Wrench, Check, LucideIcon } from 'lucide-react';
 
 interface ServiceDetail {
   slug: string;
   title: string;
-  icon: any;
+  icon: LucideIcon;
   description: string;
   longDescription: string;
   features: string[];
