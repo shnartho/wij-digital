@@ -24,7 +24,8 @@ export default function Portfolio() {
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       icon: ShoppingCart,
       link: "https://www.goldrg.com",
-      client: "Navpreet Singh, CEO"
+      client: "Navpreet Singh, CEO",
+      images: ["/gold-rg-app-playstore.png", "/goldrg-website.png"]
     },
     {
       title: "Cross Midia Agency",
@@ -58,8 +59,8 @@ export default function Portfolio() {
 
   const stats = [
     { number: "23+", label: "Projects Completed" },
-    { number: "40+", label: "Happy Clients" },
-    { number: "15+", label: "Countries Served" },
+    { number: "7+", label: "Happy Clients" },
+    { number: "4+", label: "Countries Served" },
     { number: "100%", label: "Client Satisfaction" }
   ];
 
@@ -204,6 +205,18 @@ export default function Portfolio() {
                           </span>
                         ))}
                       </div>
+
+                      {/* Images */}
+                      {project.images && (
+                        <div className="mb-4">
+                          <h4 className="text-lg font-semibold text-white mb-3">Screenshots:</h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {project.images.map((img, idx) => (
+                              <img key={idx} src={img} alt={`${project.title} screenshot ${idx+1}`} className="rounded-lg shadow-lg w-full h-auto" />
+                            ))}
+                          </div>
+                        </div>
+                      )}
 
                       {/* Client */}
                       <p className="text-gray-400 italic">
