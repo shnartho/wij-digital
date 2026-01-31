@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,16 +21,15 @@ const Footer = () => {
               <img src="/wijdigital-logo.png" alt="Wij Digital Logo" className="h-10 w-auto" />
             </motion.div>
             <p className="text-muted-foreground max-w-md leading-relaxed">
-              Your complete digital partner. From websites and apps to marketing and branding, 
-              we deliver high-performance solutions that drive real business growth.
+              {t("footer.brand")}
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">Services</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4">{t("footer.services")}</h4>
             <ul className="space-y-3">
-              {["Web Development", "Mobile Apps", "Digital Marketing", "Branding", "Custom Solutions"].map((item) => (
+              {[t("footer.web"), t("footer.apps"), t("footer.marketing"), t("footer.branding"), t("footer.solutions")].map((item) => (
                 <li key={item}>
                   <a href="/services" className="text-muted-foreground hover:text-primary transition-colors">
                     {item}
@@ -40,24 +41,24 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">Company</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4">{t("footer.company")}</h4>
             <ul className="space-y-3">
               <li>
                 <a href="/about-us" className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
+                  {t("footer.aboutUs")}
                 </a>
               </li>
               <li>
                 <a href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">
-                  Case Studies
+                  {t("footer.caseStudies")}
                 </a>
               </li>
               <li>
-                <span className="text-muted-foreground">Careers</span>
+                <span className="text-muted-foreground">{t("footer.careers")}</span>
               </li>
               <li>
                 <a href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
+                  {t("footer.contact")}
                 </a>
               </li>
             </ul>
@@ -67,14 +68,14 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-glass-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Wij Digital. All rights reserved.
+            © {currentYear} Wij Digital. {t("footer.rights")}.
           </p>
           <div className="flex items-center gap-6">
             <a href="/privacy-policy" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-              Privacy Policy
+              {t("footer.privacy")}
             </a>
             <a href="/terms-of-service" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-              Terms of Service
+              {t("footer.terms")}
             </a>
           </div>
         </div>

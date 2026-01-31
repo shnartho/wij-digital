@@ -1,68 +1,20 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '../contexts/LanguageContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import { ExternalLink, Code, Smartphone, TrendingUp, ShoppingCart } from 'lucide-react';
 
 export default function Portfolio() {
+  const { t } = useLanguage();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const projects = [
-    {
-      title: "Gold Restaurant Group",
-      category: "Restaurant Chain Website",
-      description: "Complete digital transformation for a premium restaurant chain. Developed a modern website with online reservation system, menu management, and multi-location support.",
-      results: [
-        "300% increase in online reservations",
-        "65% reduction in phone inquiries",
-        "40% increase in catering bookings"
-      ],
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      icon: ShoppingCart,
-      link: "https://www.goldrg.com",
-      client: "Navpreet Singh, CEO",
-      images: ["/gold-rg-app-playstore.png", "/goldrg-website.png"]
-    },
-    {
-      title: "Cross Midia Agency",
-      category: "Digital Agency Platform",
-      description: "Built a comprehensive portfolio and project management platform for a leading digital agency. Features include client portal, project tracking, and analytics dashboard.",
-      results: [
-        "50% faster project onboarding",
-        "80% improvement in client communication",
-        "Enhanced professional credibility"
-      ],
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "AWS"],
-      icon: Code,
-      link: "https://romulocruz.com/",
-      client: "Romulo Cruz, Founder"
-    },
-    {
-      title: "MetasurfAI",
-      category: "AI-Powered SaaS Platform",
-      description: "Developed an innovative AI-driven web browsing and automation platform. Complex features include AI model integration, real-time data processing, and advanced analytics.",
-      results: [
-        "Successfully launched MVP in 4 months",
-        "Secured seed funding based on platform",
-        "Growing user base across 15 countries"
-      ],
-      technologies: ["React", "Python", "TensorFlow", "Docker"],
-      icon: TrendingUp,
-      link: "https://www.metasurfai.com",
-      client: "Shahadat Nayem, CEO"
-    }
-  ];
-
-  const stats = [
-    { number: "23+", label: "Projects Completed" },
-    { number: "7+", label: "Happy Clients" },
-    { number: "4+", label: "Countries Served" },
-    { number: "100%", label: "Client Satisfaction" }
-  ];
+  const projects = t('pages.portfolio.projects');
+  const stats = t('pages.portfolio.stats');
 
   return (
     <>
@@ -92,11 +44,11 @@ export default function Portfolio() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  Our Success Stories
+                  {t('pages.portfolio.title')}
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                Real projects. Real results. See how we've helped businesses transform digitally and achieve their goals.
+                {t('pages.portfolio.subtitle')}
               </p>
             </motion.div>
           </div>
@@ -136,8 +88,9 @@ export default function Portfolio() {
         {/* Projects Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto space-y-8">
-            {projects.map((project, index) => {
-              const Icon = project.icon;
+            {projects.map((project: any, index: number) => {
+              const iconMap: any = { ShoppingCart, Code, TrendingUp };
+              const Icon = iconMap[project.icon] || Code;
               return (
                 <motion.div
                   key={project.title}
@@ -171,7 +124,7 @@ export default function Portfolio() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:scale-105 transition-all duration-300 self-start"
                           >
-                            Visit Site
+                            {t('pages.portfolio.visitSite')}
                             <ExternalLink className="w-4 h-4" />
                           </a>
                         )}
@@ -183,7 +136,7 @@ export default function Portfolio() {
 
                       {/* Results */}
                       <div className="mb-4">
-                        <h4 className="text-lg font-semibold text-white mb-3">Key Results:</h4>
+                        <h4 className="text-lg font-semibold text-white mb-3">{t('pages.portfolio.keyResults')}</h4>
                         <ul className="space-y-2">
                           {project.results.map((result, idx) => (
                             <li key={idx} className="flex items-start gap-2 text-gray-300">
@@ -209,9 +162,9 @@ export default function Portfolio() {
                       {/* Images */}
                       {project.images && (
                         <div className="mb-4">
-                          <h4 className="text-lg font-semibold text-white mb-3">Screenshots:</h4>
+                          <h4 className="text-lg font-semibold text-white mb-3">{t('pages.portfolio.screenshots')}</h4>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {project.images.map((img, idx) => (
+                            {project.images.map((img: string, idx: number) => (
                               <img key={idx} src={img} alt={`${project.title} screenshot ${idx+1}`} className="rounded-lg shadow-lg w-full h-auto" />
                             ))}
                           </div>
@@ -220,7 +173,7 @@ export default function Portfolio() {
 
                       {/* Client */}
                       <p className="text-gray-400 italic">
-                        Client: {project.client}
+                        {t('pages.portfolio.client')} {project.client}
                       </p>
                     </div>
                   </div>
@@ -242,10 +195,10 @@ export default function Portfolio() {
             >
               <div className="text-5xl text-purple-400 mb-4">"</div>
               <p className="text-xl md:text-2xl text-gray-300 mb-6 italic">
-                "Wij Digital transformed our online presence completely. Their expertise, professionalism, and dedication to our success made all the difference. Highly recommended!"
+                {t('pages.portfolio.testimonialQuote')}
               </p>
-              <p className="text-white font-semibold">Navpreet Singh</p>
-              <p className="text-gray-400">CEO, Gold Restaurant Group</p>
+              <p className="text-white font-semibold">{t('pages.portfolio.testimonialAuthor')}</p>
+              <p className="text-gray-400">{t('pages.portfolio.testimonialRole')}</p>
             </motion.div>
           </div>
         </section>
@@ -262,11 +215,11 @@ export default function Portfolio() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Ready to Be Our Next Success Story?
+                  {t('pages.portfolio.ctaTitle')}
                 </span>
               </h2>
               <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-                Let's create something amazing together. Contact us to discuss your project and see how we can help you achieve exceptional results.
+                {t('pages.portfolio.ctaDescription')}
               </p>
               <a
                 href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services."
@@ -274,7 +227,7 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
-                Start Your Project
+                {t('pages.portfolio.ctaButton')}
               </a>
             </motion.div>
           </div>

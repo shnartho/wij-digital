@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ParticleBackground from "./ParticleBackground";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // YouTube API types
 declare global {
@@ -45,6 +46,7 @@ const HeroSection = () => {
   const [desktopPlayer, setDesktopPlayer] = useState<YTPlayer | null>(null);
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const { t } = useLanguage();
 
   // Load YouTube API
   useEffect(() => {
@@ -115,7 +117,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-display text-4xl font-bold leading-tight text-foreground mb-4 text-center"
           >
-            <span className="gradient-text">We Transform Your Business Digitally to Drive Revenue</span>
+            <span className="gradient-text">{t("hero.mainHeadline")}</span>
           </motion.h1>
 
           {/* Trusted By Section - Full Width */}
@@ -126,7 +128,7 @@ const HeroSection = () => {
             className="mb-4"
           >
             <div className="flex items-center justify-center gap-2 mb-2">
-              <p className="text-sm text-muted-foreground whitespace-nowrap">Trusted by</p>
+              <p className="text-sm text-muted-foreground whitespace-nowrap">{t("hero.trustedBy")}</p>
             </div>
             <div className="relative overflow-hidden w-full">
               <motion.div
@@ -228,35 +230,35 @@ const HeroSection = () => {
             <div className="grid grid-cols-2 gap-3">
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Website with Full Payment Setup</span>
+                <span className="text-sm text-muted-foreground">{t("hero.services.website")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">iOS & Android Apps That Sell</span>
+                <span className="text-sm text-muted-foreground">{t("hero.services.apps")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Marketing That Brings Customers</span>
+                <span className="text-sm text-muted-foreground">{t("hero.services.marketing")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Brand That Stands Out</span>
+                <span className="text-sm text-muted-foreground">{t("hero.services.brand")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">AI Automation That Saves Money</span>
+                <span className="text-sm text-muted-foreground">{t("hero.services.ai")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Blockchain & Crypto Solutions</span>
+                <span className="text-sm text-muted-foreground">{t("hero.services.blockchain")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">SaaS Platforms That Scale</span>
+                <span className="text-sm text-muted-foreground">{t("hero.services.saas")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Videos That Go Viral</span>
+                <span className="text-sm text-muted-foreground">{t("hero.services.videos")}</span>
               </div>
             </div>
           </motion.div>
@@ -276,7 +278,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get Your Revenue Plan
+              {t("hero.getYourPlan")}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </motion.a>
 
@@ -286,7 +288,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View Solutions
+              {t("hero.viewSolutions")}
             </motion.a>
           </motion.div>
 
@@ -298,10 +300,10 @@ const HeroSection = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { value: "400%", label: "Revenue Growth" },
-              { value: "7+", label: "Business Clients" },
-              { value: "24/7", label: "Tech Support" },
-              { value: "2hrs", label: "Response Time" },
+              { value: "400%", label: t("hero.revenueGrowth") },
+              { value: "7+", label: t("hero.businessClients") },
+              { value: "24/7", label: t("hero.techSupport") },
+              { value: "2hrs", label: t("hero.responseTime") },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="font-display text-2xl font-bold neon-text mb-1">
@@ -326,7 +328,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-display text-5xl xl:text-6xl font-bold leading-tight mb-4"
             >
-              <span className="gradient-text">We Transform Your Business Digitally to Drive Revenue</span>
+              <span className="gradient-text">{t("hero.mainHeadline")}</span>
             </motion.h1>
 
             {/* Trusted By Section */}
@@ -337,7 +339,7 @@ const HeroSection = () => {
               className="mb-4"
             >
               <div className="flex items-center justify-between gap-4">
-                <p className="text-xs text-muted-foreground whitespace-nowrap">Trusted by</p>
+                <p className="text-xs text-muted-foreground whitespace-nowrap">{t("hero.trustedBy")}</p>
                 <div className="flex-1 relative overflow-hidden max-w-xl">
                   <motion.div
                     className="flex items-center gap-8"
@@ -419,35 +421,35 @@ const HeroSection = () => {
               <div className="grid grid-cols-2 gap-3 max-w-2xl">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Website with Full Payment Setup</span>
+                  <span className="text-base text-muted-foreground">{t("hero.services.website")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">iOS & Android Apps That Sell</span>
+                  <span className="text-base text-muted-foreground">{t("hero.services.apps")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Marketing That Brings Customers</span>
+                  <span className="text-base text-muted-foreground">{t("hero.services.marketing")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Brand That Stands Out</span>
+                  <span className="text-base text-muted-foreground">{t("hero.services.brand")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">AI Automation That Saves Money</span>
+                  <span className="text-base text-muted-foreground">{t("hero.services.ai")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Blockchain & Crypto Solutions</span>
+                  <span className="text-base text-muted-foreground">{t("hero.services.blockchain")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">SaaS Platforms That Scale</span>
+                  <span className="text-base text-muted-foreground">{t("hero.services.saas")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-base text-muted-foreground">Videos That Go Viral</span>
+                  <span className="text-base text-muted-foreground">{t("hero.services.videos")}</span>
                 </div>
               </div>
             </motion.div>
@@ -490,7 +492,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Get Your Revenue Plan
+                {t("hero.getYourPlan")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.a>
 
@@ -500,7 +502,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                View Solutions
+                {t("hero.viewSolutions")}
               </motion.a>
             </div>
 
@@ -512,10 +514,10 @@ const HeroSection = () => {
               className="grid grid-cols-4 gap-6"
             >
               {[
-                { value: "400%", label: "Revenue Growth" },
-                { value: "7+", label: "Business Clients" },
-                { value: "24/7", label: "Tech Support" },
-                { value: "2hrs", label: "Response Time" },
+                { value: "400%", label: t("hero.revenueGrowth") },
+                { value: "7+", label: t("hero.businessClients") },
+                { value: "24/7", label: t("hero.techSupport") },
+                { value: "2hrs", label: t("hero.responseTime") },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="font-display text-3xl font-bold neon-text mb-1">

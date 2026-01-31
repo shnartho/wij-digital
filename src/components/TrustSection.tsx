@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TrustSection = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative py-16 px-4">
       <div className="relative max-w-6xl mx-auto">
@@ -19,14 +21,14 @@ const TrustSection = () => {
               className="w-20 h-20 md:w-24 md:h-24"
             />
             <div className="text-center">
-              <div className="font-bold text-foreground text-lg">Money Back Guarantee</div>
-              <div className="text-sm text-muted-foreground">100% Risk Free</div>
+              <div className="font-bold text-foreground text-lg">{t("trust.moneyBack")}</div>
+              <div className="text-sm text-muted-foreground">{t("trust.riskFree")}</div>
             </div>
           </div>
 
           <div className="text-center px-4 md:px-8">
             <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">
-              <span className="gradient-text">Your Success is Our Guarantee</span>
+              <span className="gradient-text">{t("trust.title")}</span>
             </h2>
           </div>
 
@@ -37,8 +39,8 @@ const TrustSection = () => {
               className="w-20 h-20 md:w-24 md:h-24"
             />
             <div className="text-center">
-              <div className="font-bold text-foreground text-lg">Trusted Company</div>
-              <div className="text-sm text-muted-foreground">7+ Happy Clients</div>
+              <div className="font-bold text-foreground text-lg">{t("trust.trusted")}</div>
+              <div className="text-sm text-muted-foreground">{t("trust.clients")}</div>
             </div>
           </div>
         </motion.div>

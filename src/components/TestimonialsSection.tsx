@@ -1,31 +1,33 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Navpreet Singh",
-    role: "CEO, Gold Restaurant and Grocery",
-    website: "https://www.goldrg.com",
-    content: "Wij Digital completely changed our way of operation. Our website, Android, and iOS apps at www.goldrg.com now allow people to order food online. Our business is growing, digital marketing is driving revenue up, and we're getting permanent customers with better visibility.",
-    rating: 5,
-  },
-  {
-    name: "Romulo Cruz",
-    role: "CEO, Cross Midia",
-    website: "https://www.romulocruz.com",
-    content: "Our strategic partnership with Wij Digital transformed our business. They improved our SEO, expanded organic reach, and elevated our business standards. From website development to marketing strategies, they've driven our growth. Visit www.romulocruz.com to see the results.",
-    rating: 5,
-  },
-  {
-    name: "Shahadat Nayem",
-    role: "CEO, MetasurfAI",
-    website: "https://www.metasurfai.com",
-    content: "Wij Digital built our complex webapp and continues development. Our B2C model needed strategic marketing, and they've delivered exceptional results. Their technical expertise and strategies helped us scale effectively. I highly recommend their professional services.",
-    rating: 5,
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TestimonialsSection = () => {
+  const { t } = useLanguage();
+
+  const testimonials = [
+    {
+      name: "Navpreet Singh",
+      role: "CEO, Gold Restaurant and Grocery",
+      website: "https://www.goldrg.com",
+      content: "Wij Digital completely changed our way of operation. Our website, Android, and iOS apps at www.goldrg.com now allow people to order food online. Our business is growing, digital marketing is driving revenue up, and we're getting permanent customers with better visibility.",
+      rating: 5,
+    },
+    {
+      name: "Romulo Cruz",
+      role: "CEO, Cross Midia",
+      website: "https://www.romulocruz.com",
+      content: "Our strategic partnership with Wij Digital transformed our business. They improved our SEO, expanded organic reach, and elevated our business standards. From website development to marketing strategies, they've driven our growth. Visit www.romulocruz.com to see the results.",
+      rating: 5,
+    },
+    {
+      name: "Shahadat Nayem",
+      role: "CEO, MetasurfAI",
+      website: "https://www.metasurfai.com",
+      content: "Wij Digital built our complex webapp and continues development. Our B2C model needed strategic marketing, and they've delivered exceptional results. Their technical expertise and strategies helped us scale effectively. I highly recommend their professional services.",
+      rating: 5,
+    },
+  ];
   return (
     <section id="testimonials" className="relative py-24 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -38,8 +40,8 @@ const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Businesses We've </span>
-            <span className="gradient-text">Helped Grow</span>
+            <span className="text-foreground">{t("testimonials.title")} </span>
+            <span className="gradient-text">{t("testimonials.titleHighlight")}</span>
           </h2>
         </motion.div>
 

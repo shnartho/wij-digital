@@ -1,19 +1,39 @@
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const logo = "/wijdigital-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const [mobileLangDropdownOpen, setMobileLangDropdownOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+  const desktopDropdownRef = useRef<HTMLDivElement>(null);
+  const mobileDropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (desktopDropdownRef.current && !desktopDropdownRef.current.contains(event.target as Node)) {
+        setLangDropdownOpen(false);
+      }
+      if (mobileDropdownRef.current && !mobileDropdownRef.current.contains(event.target as Node)) {
+        setMobileLangDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const navItems = [
-    { label: "About", href: "/about-us" },
-    { label: "Services", href: "/services" },
-    { label: "Why us?", href: "/why-us" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "FAQ", href: "/faq" },
-    { label: "Contact", href: "/contact" },
+    { label: t("nav.about"), href: "/about-us" },
+    { label: t("nav.services"), href: "/services" },
+    { label: t("nav.whyUs"), href: "/why-us" },
+    { label: t("nav.portfolio"), href: "/portfolio" },
+    { label: t("nav.faq"), href: "/faq" },
+    { label: t("nav.contact"), href: "/contact" },
   ];
 
   return (
@@ -54,6 +74,73 @@ const Navbar = () => {
               {item.label}
             </motion.a>
           ))}
+          
+          {/* Language Switcher */}
+          <div className="flex items-center gap-2 pl-2 border-l border-border">
+            <div className="relative" ref={desktopDropdownRef}>
+              <button
+                onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+                className="px-2 py-1 rounded text-sm font-medium text-muted-foreground hover:text-primary flex items-center gap-1"
+              >
+                <Globe size={12} />
+                {language === 'pt' ? (
+                  <svg width="16" height="12" viewBox="0 0 20 15" className="rounded-sm">
+                    <rect width="8" height="15" fill="#006600"/>
+                    <rect x="8" width="12" height="15" fill="#FF0000"/>
+                    <circle cx="10" cy="7.5" r="3" fill="#FFFF00" stroke="#FFFFFF" strokeWidth="0.5"/>
+                    <circle cx="10" cy="7.5" r="2" fill="none" stroke="#FFFFFF" strokeWidth="0.3"/>
+                    <path d="M8 6 L12 6 L12 9 L8 9 Z" fill="#FFFFFF"/>
+                    <path d="M9 7 L11 7 M10 6 L10 9" stroke="#FF0000" strokeWidth="0.5"/>
+                  </svg>
+                ) : (
+                  <svg width="16" height="12" viewBox="0 0 20 15" className="rounded-sm">
+                    <rect width="20" height="15" fill="#012169"/>
+                    <path d="M0 0L20 15M20 0L0 15" stroke="#FFFFFF" strokeWidth="2"/>
+                    <path d="M10 0V15M0 7.5H20" stroke="#FFFFFF" strokeWidth="3"/>
+                    <path d="M10 0V15M0 7.5H20" stroke="#C8102E" strokeWidth="1"/>
+                    <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" strokeWidth="1"/>
+                  </svg>
+                )}
+                <ChevronDown size={12} />
+              </button>
+              {langDropdownOpen && (
+                <div className="absolute top-full mt-1 right-0 glass-card p-1 rounded min-w-20 bg-background/95 backdrop-blur-sm border border-border">
+                  <button
+                    onClick={() => {
+                      setLanguage('pt');
+                      setLangDropdownOpen(false);
+                    }}
+                    className={`w-full px-2 py-1 text-left text-sm hover:bg-secondary/20 rounded flex items-center ${language === 'pt' ? 'bg-primary/20' : ''}`}
+                  >
+                    <svg width="16" height="12" viewBox="0 0 20 15" className="rounded-sm">
+                      <rect width="8" height="15" fill="#006600"/>
+                      <rect x="8" width="12" height="15" fill="#FF0000"/>
+                      <circle cx="10" cy="7.5" r="3" fill="#FFFF00" stroke="#FFFFFF" strokeWidth="0.5"/>
+                      <circle cx="10" cy="7.5" r="2" fill="none" stroke="#FFFFFF" strokeWidth="0.3"/>
+                      <path d="M8 6 L12 6 L12 9 L8 9 Z" fill="#FFFFFF"/>
+                      <path d="M9 7 L11 7 M10 6 L10 9" stroke="#FF0000" strokeWidth="0.5"/>
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setLanguage('en');
+                      setLangDropdownOpen(false);
+                    }}
+                    className={`w-full px-2 py-1 text-left text-sm hover:bg-secondary/20 rounded flex items-center ${language === 'en' ? 'bg-primary/20' : ''}`}
+                  >
+                    <svg width="16" height="12" viewBox="0 0 20 15" className="rounded-sm">
+                      <rect width="20" height="15" fill="#012169"/>
+                      <path d="M0 0L20 15M20 0L0 15" stroke="#FFFFFF" strokeWidth="2"/>
+                      <path d="M10 0V15M0 7.5H20" stroke="#FFFFFF" strokeWidth="3"/>
+                      <path d="M10 0V15M0 7.5H20" stroke="#C8102E" strokeWidth="1"/>
+                      <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" strokeWidth="1"/>
+                    </svg>
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+
           <motion.a
             href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20your%20services."
             target="_blank"
@@ -65,7 +152,7 @@ const Navbar = () => {
               boxShadow: "0 0 20px hsl(185 100% 50% / 0.3)",
             }}
           >
-            Get Started
+            {t("nav.getStarted")}
           </motion.a>
         </motion.div>
       </div>
@@ -79,6 +166,74 @@ const Navbar = () => {
             Wij <span className="gradient-text">Digital</span>
           </span>
         </a>
+      </div>
+
+      {/* Mobile Language Selector */}
+      <div className="md:hidden fixed top-2 right-[3rem] z-50">
+        <div className="flex items-center gap-1 glass-card p-1.5 rounded-full bg-background/95 backdrop-blur-sm">
+          <div className="relative" ref={mobileDropdownRef}>
+            <button
+              onClick={() => setMobileLangDropdownOpen(!mobileLangDropdownOpen)}
+              className="text-xs font-medium text-muted-foreground hover:text-primary flex items-center gap-1 px-1.5 py-0.5"
+            >
+              <Globe size={10} />
+              {language === 'pt' ? (
+                <svg width="12" height="9" viewBox="0 0 20 15" className="rounded-sm">
+                  <rect width="8" height="15" fill="#006600"/>
+                  <rect x="8" width="12" height="15" fill="#FF0000"/>
+                  <circle cx="10" cy="7.5" r="3" fill="#FFFF00" stroke="#FFFFFF" strokeWidth="0.5"/>
+                  <circle cx="10" cy="7.5" r="2" fill="none" stroke="#FFFFFF" strokeWidth="0.3"/>
+                  <path d="M8 6 L12 6 L12 9 L8 9 Z" fill="#FFFFFF"/>
+                  <path d="M9 7 L11 7 M10 6 L10 9" stroke="#FF0000" strokeWidth="0.5"/>
+                </svg>
+              ) : (
+                <svg width="12" height="9" viewBox="0 0 20 15" className="rounded-sm">
+                  <rect width="20" height="15" fill="#012169"/>
+                  <path d="M0 0L20 15M20 0L0 15" stroke="#FFFFFF" strokeWidth="2"/>
+                  <path d="M10 0V15M0 7.5H20" stroke="#FFFFFF" strokeWidth="3"/>
+                  <path d="M10 0V15M0 7.5H20" stroke="#C8102E" strokeWidth="1"/>
+                  <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" strokeWidth="1"/>
+                </svg>
+              )}
+              <ChevronDown size={10} />
+            </button>
+            {mobileLangDropdownOpen && (
+              <div className="absolute top-full mt-1 right-0 glass-card p-1 rounded min-w-16 bg-background/95 backdrop-blur-sm border border-border">
+                <button
+                  onClick={() => {
+                    setLanguage('pt');
+                    setMobileLangDropdownOpen(false);
+                  }}
+                  className={`w-full px-2 py-1 text-left text-xs hover:bg-secondary/20 rounded flex items-center ${language === 'pt' ? 'bg-primary/20' : ''}`}
+                >
+                  <svg width="12" height="9" viewBox="0 0 20 15" className="rounded-sm">
+                    <rect width="8" height="15" fill="#006600"/>
+                    <rect x="8" width="12" height="15" fill="#FF0000"/>
+                    <circle cx="10" cy="7.5" r="3" fill="#FFFF00" stroke="#FFFFFF" strokeWidth="0.5"/>
+                    <circle cx="10" cy="7.5" r="2" fill="none" stroke="#FFFFFF" strokeWidth="0.3"/>
+                    <path d="M8 6 L12 6 L12 9 L8 9 Z" fill="#FFFFFF"/>
+                    <path d="M9 7 L11 7 M10 6 L10 9" stroke="#FF0000" strokeWidth="0.5"/>
+                  </svg>
+                </button>
+                <button
+                  onClick={() => {
+                    setLanguage('en');
+                    setMobileLangDropdownOpen(false);
+                  }}
+                  className={`w-full px-2 py-1 text-left text-xs hover:bg-secondary/20 rounded flex items-center ${language === 'en' ? 'bg-primary/20' : ''}`}
+                >
+                  <svg width="12" height="9" viewBox="0 0 20 15" className="rounded-sm">
+                    <rect width="20" height="15" fill="#012169"/>
+                    <path d="M0 0L20 15M20 0L0 15" stroke="#FFFFFF" strokeWidth="2"/>
+                    <path d="M10 0V15M0 7.5H20" stroke="#FFFFFF" strokeWidth="3"/>
+                    <path d="M10 0V15M0 7.5H20" stroke="#C8102E" strokeWidth="1"/>
+                    <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" strokeWidth="1"/>
+                  </svg>
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
       <div className="md:hidden fixed top-2 right-2 z-50">
@@ -109,6 +264,7 @@ const Navbar = () => {
                   {item.label}
                 </a>
               ))}
+              
               <a
                 href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20your%20services."
                 target="_blank"
@@ -116,7 +272,7 @@ const Navbar = () => {
                 className="px-3 py-1.5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-center text-sm mt-1"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
+                {t("nav.getStarted")}
               </a>
             </div>
           </motion.div>

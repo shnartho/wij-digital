@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '../contexts/LanguageContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
+  const { t } = useLanguage();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -14,32 +16,32 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
+      title: t('pages.contact.contactInfo.email'),
       content: "shnartho@gmail.com",
       link: "mailto:shnartho@gmail.com"
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: t('pages.contact.contactInfo.phone'),
       content: "+351 910 481 951",
       link: "tel:+351910481951"
     },
     {
       icon: MessageCircle,
-      title: "WhatsApp",
+      title: t('pages.contact.contactInfo.whatsapp'),
       content: "+351 910 481 951",
       link: "https://wa.me/351910481951"
     },
     {
       icon: MapPin,
-      title: "Location",
-      content: "Serving Clients Worldwide",
+      title: t('pages.contact.contactInfo.location'),
+      content: t('pages.contact.contactInfo.locationValue'),
       link: null
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      content: "Mon-Fri: 9AM - 6PM EST",
+      title: t('pages.contact.contactInfo.businessHours'),
+      content: t('pages.contact.contactInfo.businessHoursValue'),
       link: null
     }
   ];
@@ -87,11 +89,11 @@ export default function Contact() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  Let's Build Something Amazing
+                  {t('pages.contact.title')}
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                Ready to transform your business digitally? Get in touch with our team for a free consultation and custom quote.
+                {t('pages.contact.subtitle')}
               </p>
             </motion.div>
           </div>
@@ -147,7 +149,7 @@ export default function Contact() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Send Us a Message
+                  {t('pages.contact.form.title')}
                 </span>
               </h2>
 
@@ -161,14 +163,14 @@ export default function Contact() {
                 const budget = formData.get('budget');
                 const message = formData.get('message');
 
-                const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Budget:* ${budget}%0A*Message:* ${message}`;
+                const whatsappMessage = `*New Contact Form Submission*%0A%0A*${t('contact.formLabels.name')}:* ${name}%0A*${t('contact.contactInfo.email')}:* ${email}%0A*${t('contact.contactInfo.phone')}:* ${phone}%0A*Service:* ${service}%0A*Budget:* ${budget}%0A*${t('contact.formLabels.message')}:* ${message}`;
 
                 window.open(`https://wa.me/351910481951?text=${whatsappMessage}`, '_blank');
               }}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-white mb-2 font-medium">
-                      Your Name *
+                      {t('pages.contact.form.name')} *
                     </label>
                     <input
                       type="text"
@@ -182,7 +184,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="email" className="block text-white mb-2 font-medium">
-                      Email Address *
+                      {t('pages.contact.form.email')} *
                     </label>
                     <input
                       type="email"
@@ -198,7 +200,7 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-white mb-2 font-medium">
-                      Phone Number
+                      {t('pages.contact.form.phone')}
                     </label>
                     <input
                       type="tel"
@@ -211,7 +213,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="service" className="block text-white mb-2 font-medium">
-                      Service Interested In *
+                      {t('pages.contact.form.service')} *
                     </label>
                     <select
                       id="service"
@@ -219,40 +221,40 @@ export default function Contact() {
                       required
                       className="w-full px-4 py-3 bg-slate-900/50 border border-purple-500/30 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors"
                     >
-                      <option value="">Select a service</option>
-                      <option value="web-development">Web Development</option>
-                      <option value="mobile-app">Mobile App Development</option>
-                      <option value="ui-ux-design">UI/UX Design</option>
-                      <option value="digital-marketing">Digital Marketing</option>
-                      <option value="ecommerce">E-commerce Solutions</option>
-                      <option value="custom">Custom Solutions</option>
-                      <option value="other">Other</option>
+                      <option value="">{t('pages.contact.form.servicePlaceholder')}</option>
+                      <option value="web-development">{t('pages.contact.form.serviceOptions.webDev')}</option>
+                      <option value="mobile-app">{t('pages.contact.form.serviceOptions.mobileApp')}</option>
+                      <option value="ui-ux-design">{t('pages.contact.form.serviceOptions.uiux')}</option>
+                      <option value="digital-marketing">{t('pages.contact.form.serviceOptions.marketing')}</option>
+                      <option value="ecommerce">{t('pages.contact.form.serviceOptions.ecommerce')}</option>
+                      <option value="custom">{t('pages.contact.form.serviceOptions.custom')}</option>
+                      <option value="other">{t('pages.contact.form.serviceOptions.other')}</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="budget" className="block text-white mb-2 font-medium">
-                    Estimated Budget
+                    {t('pages.contact.form.budget')}
                   </label>
                   <select
                     id="budget"
                     name="budget"
                     className="w-full px-4 py-3 bg-slate-900/50 border border-purple-500/30 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors"
                   >
-                    <option value="">Select a range</option>
-                    <option value="under-5k">Under $5,000</option>
-                    <option value="5k-10k">$5,000 - $10,000</option>
-                    <option value="10k-25k">$10,000 - $25,000</option>
-                    <option value="25k-50k">$25,000 - $50,000</option>
-                    <option value="50k-plus">$50,000+</option>
-                    <option value="not-sure">Not Sure</option>
+                    <option value="">{t('pages.contact.form.budgetPlaceholder')}</option>
+                    <option value="under-5k">{t('pages.contact.form.budgetOptions.under5k')}</option>
+                    <option value="5k-10k">{t('pages.contact.form.budgetOptions.5k-10k')}</option>
+                    <option value="10k-25k">{t('pages.contact.form.budgetOptions.10k-25k')}</option>
+                    <option value="25k-50k">{t('pages.contact.form.budgetOptions.25k-50k')}</option>
+                    <option value="50k-plus">{t('pages.contact.form.budgetOptions.50k-plus')}</option>
+                    <option value="not-sure">{t('pages.contact.form.budgetOptions.notSure')}</option>
                   </select>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-white mb-2 font-medium">
-                    Project Details *
+                    {t('pages.contact.form.message')} *
                   </label>
                   <textarea
                     id="message"
@@ -260,7 +262,7 @@ export default function Contact() {
                     required
                     rows={6}
                     className="w-full px-4 py-3 bg-slate-900/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors resize-none"
-                    placeholder="Tell us about your project, goals, and timeline..."
+                    placeholder={t('pages.contact.form.messagePlaceholder')}
                   ></textarea>
                 </div>
 
@@ -273,11 +275,11 @@ export default function Contact() {
                     className="mt-1 w-4 h-4 accent-purple-500"
                   />
                   <label htmlFor="consent" className="text-gray-300 text-sm">
-                    I agree to the{' '}
+                    {t('pages.contact.form.consent')}{' '}
                     <a href="/privacy-policy" className="text-purple-400 hover:text-purple-300 transition-colors">
-                      Privacy Policy
+                      {t('pages.contact.form.privacyPolicy')}
                     </a>{' '}
-                    and consent to being contacted about my inquiry.
+                    {t('pages.contact.form.consentText')}
                   </label>
                 </div>
 
@@ -285,12 +287,12 @@ export default function Contact() {
                   type="submit"
                   className="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
-                  Send Message
+                  {t('pages.contact.form.submit')}
                 </button>
               </form>
 
               <p className="text-center text-gray-400 text-sm mt-6">
-                We typically respond within 24 hours on business days
+                {t('pages.contact.form.responseTime')}
               </p>
             </motion.div>
           </div>
@@ -308,18 +310,18 @@ export default function Contact() {
             >
               <h2 className="text-3xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Prefer to Talk Directly?
+                  {t('pages.contact.quickContact.title')}
                 </span>
               </h2>
               <p className="text-gray-300 text-lg mb-8">
-                Schedule a free 30-minute consultation call with our team
+                {t('pages.contact.quickContact.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+351910481951"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
-                  Call Now
+                  {t('pages.contact.quickContact.callNow')}
                 </a>
                 <a
                   href="https://wa.me/351910481951"
@@ -327,7 +329,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-green-600 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-green-600/50"
                 >
-                  WhatsApp Us
+                  {t('pages.contact.quickContact.whatsappUs')}
                 </a>
               </div>
             </motion.div>

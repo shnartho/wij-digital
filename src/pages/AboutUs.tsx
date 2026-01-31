@@ -1,71 +1,25 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '../contexts/LanguageContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import { Users, Target, Award, TrendingUp, Zap, Heart } from 'lucide-react';
 
 export default function AboutUs() {
+  const { t } = useLanguage();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const values = [
-    {
-      icon: Target,
-      title: "Mission-Driven",
-      description: "We're committed to transforming businesses digitally and helping them generate sustainable revenue through innovative solutions."
-    },
-    {
-      icon: Users,
-      title: "Client-Centric",
-      description: "Your success is our success. We prioritize understanding your unique needs and delivering tailored solutions that exceed expectations."
-    },
-    {
-      icon: Award,
-      title: "Quality Excellence",
-      description: "We never compromise on quality. Every project receives meticulous attention to detail and rigorous quality assurance."
-    },
-    {
-      icon: TrendingUp,
-      title: "Innovation First",
-      description: "We stay ahead of technology trends to provide cutting-edge solutions that give you a competitive advantage."
-    },
-    {
-      icon: Zap,
-      title: "Fast Delivery",
-      description: "Time is money. We deliver projects efficiently without sacrificing quality, helping you launch faster than competitors."
-    },
-    {
-      icon: Heart,
-      title: "Long-term Partnership",
-      description: "We build lasting relationships, providing ongoing support and evolving with your business needs."
-    }
-  ];
+  const icons = [Target, Users, Award, TrendingUp, Zap, Heart];
+  const values = t('pages.aboutUs.values').map((value: any, index: number) => ({
+    ...value,
+    icon: icons[index]
+  }));
 
-  const team = [
-    {
-      stat: "23+",
-      label: "Projects Delivered",
-      description: "Successfully completed digital transformations"
-    },
-    {
-      stat: "100%",
-      label: "Client Satisfaction",
-      description: "Rated 5-star by our clients"
-    },
-    {
-      stat: "7+ Years",
-      label: "Industry Experience",
-      description: "Expertise across multiple domains"
-    },
-    {
-      stat: "24/7",
-      label: "Support Available",
-      description: "Always here when you need us"
-    }
-  ];
+  const team = t('pages.aboutUs.stats');
 
   return (
     <>
@@ -95,11 +49,11 @@ export default function AboutUs() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  About Wij Digital
+                  {t('pages.aboutUs.title')}
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                We are a passionate team of digital innovators dedicated to transforming businesses through cutting-edge technology and creative solutions.
+                {t('pages.aboutUs.hero')}
               </p>
             </motion.div>
           </div>
@@ -117,18 +71,18 @@ export default function AboutUs() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Our Story
+                  {t('pages.aboutUs.storyTitle')}
                 </span>
               </h2>
               <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  Wij Digital was founded with a simple yet powerful vision: to help businesses thrive in the digital age. We recognized that many companies struggle to navigate the complex world of digital transformation, often lacking the technical expertise or resources to create impactful online experiences.
+                  {t('pages.aboutUs.story1')}
                 </p>
                 <p>
-                  What started as a small team of passionate developers and designers has grown into a full-service digital agency. We've had the privilege of working with businesses across various industries, from startups to established enterprises, helping them achieve their digital goals and drive measurable results.
+                  {t('pages.aboutUs.story2')}
                 </p>
                 <p>
-                  Today, we pride ourselves on being more than just a service provider – we're your strategic partner in digital success. Our approach combines technical excellence with creative thinking, ensuring that every solution we deliver not only meets your requirements but exceeds your expectations.
+                  {t('pages.aboutUs.story3')}
                 </p>
               </div>
             </motion.div>
@@ -147,11 +101,11 @@ export default function AboutUs() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Our Values
+                  {t('pages.aboutUs.valuesTitle')}
                 </span>
               </h2>
               <p className="text-gray-300 text-lg">
-                The principles that guide everything we do
+                {t('pages.aboutUs.valuesSubtitle')}
               </p>
             </motion.div>
 
@@ -192,7 +146,7 @@ export default function AboutUs() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Our Track Record
+                  {t('pages.aboutUs.trackRecordTitle')}
                 </span>
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -233,11 +187,11 @@ export default function AboutUs() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Ready to Transform Your Business?
+                  {t('pages.aboutUs.ctaTitle')}
                 </span>
               </h2>
               <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-                Let's discuss how we can help you achieve your digital goals and drive real results for your business.
+                {t('pages.aboutUs.ctaDescription')}
               </p>
               <a
                 href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services."
@@ -245,7 +199,7 @@ export default function AboutUs() {
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
-                Get Started Today
+                {t('pages.aboutUs.ctaButton')}
               </a>
             </motion.div>
           </div>

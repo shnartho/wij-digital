@@ -2,77 +2,18 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { X, Check } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function WhyUs() {
+  const { t } = useLanguage();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const comparisons = [
-    {
-      category: "Core Idea",
-      them: "😴 They just build your website and stop. Project finishes, they disappear.",
-      us: "🧠 We help you grow your business. Website and apps are only tools in a complete growth system.",
-    },
-    {
-      category: "Focus",
-      them: "🎨 Only the look of your site. Colors, template, layout. No thought to sales or customers.",
-      us: "💰 Our focus is revenue growth and bringing real customers to you. Everything is built around that.",
-    },
-    {
-      category: "Planning",
-      them: "🤷 No strategy. You tell them what to build, they do it. No consideration for growth or traffic.",
-      us: "🗺️ We first understand how your business makes money and who your customers are, then plan all digital assets accordingly.",
-    },
-    {
-      category: "Website",
-      them: "💤 Generic template used everywhere. Looks okay but does not attract customers or sales.",
-      us: "🎯 Custom website built to showcase your offer, guide visitors, and convert them into leads or buyers.",
-    },
-    {
-      category: "Apps & Systems",
-      them: "😂 Not included. If you need apps, dashboards, booking, or automation, you figure it out yourself.",
-      us: "📱 Full professional apps, dashboards, booking systems, and automation built to fit your business needs.",
-    },
-    {
-      category: "Traffic",
-      them: "👻 No plan for visitors. Your site exists but nobody sees it.",
-      us: "🔍 SEO and marketing built in to attract organic traffic consistently.",
-    },
-    {
-      category: "Customers",
-      them: "🚫 No thinking about how visitors become customers.",
-      us: "👥 Clear steps to guide visitors to call, message, book, or buy.",
-    },
-    {
-      category: "Sales",
-      them: "😐 Website online but no revenue.",
-      us: "💳 System set up to generate leads, bookings, and direct sales automatically.",
-    },
-    {
-      category: "Payments",
-      them: "🤦 Not handled. You pay extra or figure it out yourself.",
-      us: "💰 All payments, subscriptions, and integrations professionally implemented.",
-    },
-    {
-      category: "Tracking",
-      them: "🙈 No tracking. No data. You have no idea what works or doesn't.",
-      us: "📊 Full tracking of visitors, leads, and sales so we continuously improve results.",
-    },
-    {
-      category: "After Launch",
-      them: "🏃 Project finished. No support. No updates.",
-      us: "🔧 Continuous support and optimization to increase customers, sales, and business growth.",
-    },
-    {
-      category: "End Result",
-      them: "🗑️ A website that looks nice but does nothing for your business.",
-      us: "🚀 A complete digital system that grows your business long-term.",
-    },
-  ];
+  const comparisons = t('comparison.items');
 
   return (
     <>
@@ -119,9 +60,9 @@ export default function WhyUs() {
                   <X className="w-6 h-6 md:w-8 md:h-8 text-muted-foreground" />
                 </div>
                 <h3 className="font-display text-sm md:text-xl lg:text-2xl font-bold text-foreground mb-1 md:mb-2">
-                  Typical Web Builders 🤡
+                  {t('comparison.builders')}
                 </h3>
-                <p className="text-xs md:text-sm text-muted-foreground">Just Making Websites</p>
+                <p className="text-xs md:text-sm text-muted-foreground">{t('comparison.buildersSubtitle')}</p>
               </motion.div>
 
               {/* Right Column - Us */}
@@ -140,15 +81,15 @@ export default function WhyUs() {
                   <Check className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
                 <h3 className="font-display text-sm md:text-xl lg:text-2xl font-bold neon-text mb-1 md:mb-2">
-                  Wij Digital 🚀
+                  {t('comparison.wijDigital')}
                 </h3>
-                <p className="text-xs md:text-sm text-muted-foreground">Building Revenue Machines</p>
+                <p className="text-xs md:text-sm text-muted-foreground">{t('comparison.wijSubtitle')}</p>
               </motion.div>
             </div>
 
             {/* Comparison Items */}
             <div className="space-y-4 md:space-y-6 max-w-6xl mx-auto">
-              {comparisons.map((item, index) => (
+              {comparisons.map((item: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}

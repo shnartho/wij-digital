@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '../contexts/LanguageContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import ServicesSection from '../components/ServicesSection';
 
 export default function Services() {
+  const { t } = useLanguage();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -58,15 +60,11 @@ export default function Services() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  Digital Solutions That
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  Drive Real Results
+                  {t('pages.services.title')}
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                From websites that sell to apps that engage, we build digital solutions that transform your business and generate revenue.
+                {t('pages.services.subtitle')}
               </p>
             </motion.div>
           </div>
@@ -87,11 +85,11 @@ export default function Services() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Ready to Transform Your Business?
+                  {t('pages.services.cta.title')}
                 </span>
               </h2>
               <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-                Let's discuss your project and create a custom solution that drives real results for your business.
+                {t('pages.services.cta.description')}
               </p>
               <a
                 href="https://wa.me/351910481951?text=Hi%20Wij%20Digital!%20I'm%20interested%20in%20learning%20more%20about%20your%20services."
@@ -99,7 +97,7 @@ export default function Services() {
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
-                Get Started Today
+                {t('nav.getStarted')}
               </a>
             </motion.div>
           </div>

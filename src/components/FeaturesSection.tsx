@@ -1,40 +1,23 @@
 import { motion } from "framer-motion";
 import { Zap, Shield, Rocket, HeartHandshake, TrendingUp, Settings } from "lucide-react";
-
-const features = [
-  {
-    icon: Zap,
-    title: "Websites That Sell",
-    description: "E-commerce platforms with payment integration that actually convert visitors into customers",
-  },
-  {
-    icon: Settings,
-    title: "Apps That Work",
-    description: "Mobile apps that solve real business problems and drive user engagement",
-  },
-  {
-    icon: Rocket,
-    title: "Marketing That Converts",
-    description: "Digital marketing campaigns that bring qualified leads and increase sales",
-  },
-  {
-    icon: TrendingUp,
-    title: "Brands That Stand Out",
-    description: "Brand identities that make your business memorable and build customer loyalty",
-  },
-  {
-    icon: Shield,
-    title: "AI That Saves Money",
-    description: "Artificial intelligence solutions that automate tasks and reduce operational costs",
-  },
-  {
-    icon: HeartHandshake,
-    title: "SaaS That Scales",
-    description: "Subscription platforms that grow with your business and generate recurring revenue",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FeaturesSection = () => {
+  const { t } = useLanguage();
+  
+  const iconMap: { [key: number]: React.ComponentType<any> } = {
+    0: Zap,
+    1: Settings,
+    2: Rocket,
+    3: TrendingUp,
+    4: Shield,
+    5: HeartHandshake,
+  };
+
+  const features = t("features.items").map((item: any, index: number) => ({
+    ...item,
+    icon: iconMap[index],
+  }));
   return (
     <section id="features" className="relative py-24 px-4">
       {/* Background decoration */}
@@ -60,11 +43,11 @@ const FeaturesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="gradient-text">Real Results</span>
-            <span className="text-foreground"> For Real Businesses</span>
+            <span className="gradient-text">{t("features.title")}</span>
+            <span className="text-foreground"> {t("features.subtitle")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We build solutions that actually work for your business, not just pretty websites.
+            {t("features.description")}
           </p>
         </motion.div>
 
