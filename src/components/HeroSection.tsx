@@ -65,7 +65,9 @@ const HeroSection = () => {
         // Mobile player
         const mobilePlayerInstance = new window.YT.Player('mobile-youtube-player', {
           events: {
-            onReady: () => console.log('Mobile YouTube player ready'),
+            onReady: () => {
+              console.log('Mobile YouTube player ready');
+            },
             onStateChange: (event: any) => {
               if (event.data === window.YT.PlayerState.PLAYING) {
                 setIsPlaying(true);
@@ -75,12 +77,13 @@ const HeroSection = () => {
             }
           }
         });
-        setMobilePlayer(mobilePlayerInstance);
 
         // Desktop player
         const desktopPlayerInstance = new window.YT.Player('desktop-youtube-player', {
           events: {
-            onReady: () => console.log('Desktop YouTube player ready'),
+            onReady: () => {
+              console.log('Desktop YouTube player ready');
+            },
             onStateChange: (event: any) => {
               if (event.data === window.YT.PlayerState.PLAYING) {
                 setIsPlaying(true);
@@ -90,6 +93,8 @@ const HeroSection = () => {
             }
           }
         });
+
+        setMobilePlayer(mobilePlayerInstance);
         setDesktopPlayer(desktopPlayerInstance);
       }
     };
@@ -201,24 +206,30 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Video Content - On Top */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-4"
-          >
             <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-xl">
               <iframe
                 id="mobile-youtube-player"
-                src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&mute=1&loop=1&playlist=0Cb4NCHG9Do&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&enablejsapi=1"
+                src="https://www.youtube.com/embed/0Cb4NCHG9Do?loop=1&playlist=0Cb4NCHG9Do&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&enablejsapi=1&fs=0&disablekb=1"
                 title="Wij Digital Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full object-cover"
               ></iframe>
+              {/* Play Button Overlay */}
+              {!isPlaying && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                  <button
+                    onClick={() => mobilePlayer?.playVideo()}
+                    className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors shadow-lg"
+                  >
+                    <svg className="w-14 h-14 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </button>
+                </div>
+              )}
             </div>
-          </motion.div>
 
           {/* Services List - Below Video in 2 Columns */}
           <motion.div
@@ -464,13 +475,26 @@ const HeroSection = () => {
           >
             <iframe
               id="desktop-youtube-player"
-              src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&mute=1&loop=1&playlist=0Cb4NCHG9Do&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&enablejsapi=1"
+              src="https://www.youtube.com/embed/0Cb4NCHG9Do?loop=1&playlist=0Cb4NCHG9Do&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&enablejsapi=1&fs=0&disablekb=1"
               title="Wij Digital Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full aspect-video rounded-lg shadow-2xl"
             ></iframe>
+            {/* Play Button Overlay */}
+            {!isPlaying && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                <button
+                  onClick={() => desktopPlayer?.playVideo()}
+                  className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors shadow-lg"
+                >
+                  <svg className="w-16 h-16 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </button>
+              </div>
+            )}
             
           </motion.div>
         </div>
@@ -545,10 +569,9 @@ const HeroSection = () => {
               </svg>
             </button>
             
-            {/* Video iframe */}
             <div className="aspect-video bg-black rounded-lg overflow-hidden">
               <iframe
-                src="https://www.youtube.com/embed/0Cb4NCHG9Do?autoplay=1&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=1"
+                src="https://www.youtube.com/embed/0Cb4NCHG9Do?controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=1&disablekb=1"
                 title="Wij Digital Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
